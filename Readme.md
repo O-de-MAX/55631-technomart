@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Мария Патрушева](https://up.htmlacademy.ru/htmlcss/13/user/55631).
-* Наставник: [Александр Аверьянов](https://up.htmlacademy.ru/htmlcss/13/user208268).
+* Наставник: [Александр Аверьянов](https://up.htmlacademy.ru/htmlcss/13/user/208268).
 
 ---
 
