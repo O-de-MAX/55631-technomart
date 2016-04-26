@@ -15,16 +15,16 @@
           <div class="search">
             <i class="fa fa-icon"></i> <!--дописать имя иконки-->
             <form method="post">
-              <input type="search" name="header-search" placeholder="Поиск:">
+              <input class="search-form" type="search" name="header-search" placeholder="Поиск:">
             </form>
           </div>
           <div class="header-personale">
             <ul class="personale">
-              <li class="change">
+              <li class="bookmark">
                 <i class="fa fa-icon"></i> <!--дописать имя иконки-->
                 <a href="#">Закладки: 0</a>
               </li>
-              <li class="change">
+              <li class="cart">
                 <i class="fa fa-icon"></i> <!--дописать имя иконки-->
                 <a href="#">Корзина: 0</a>
               </li>
@@ -94,12 +94,12 @@
         <div class="filters">
           <span class="fill">Фильтр:</span>
           <form class="filter-form" action="index.html" method="post">
-            <fieldset class="group prise">
+            <fieldset class="filter-group prise">
               <legend>цена:</legend>
               <div class="price-slider fiil">
-                <div class="slider"></div>
+                <div class="handle"></div>
                 <div class="progress"></div>
-                <div class="slider"></div>
+                <div class="handle"></div>
               </div>
               <div class="range">
                 <input class="text-range fill" type="text" value="min">
@@ -107,41 +107,41 @@
                 <input class="text-range fill" type="text" value="max">
               </div>
             </fieldset>
-            <fieldset class="group brands">
+            <fieldset class="filter-group brands">
               <legend>производители:</legend>
               <ul class="brands-filter">
-                <li>
+                <li  class="checkbox checked">
                   <input type="checkbox" name="bosch" id="bosch-field" checked>
                   <label for="bosch-field">BOSCH</label>
                 </li>
-                <li>
+                <li class="checkbox">
                   <input type="checkbox" name="interskol" id="interskol-field">
                   <label for="interskol-field">ИНТЕРСКОЛ</label>
                 </li>
-                <li>
+                <li class="checkbox checked">
                   <input type="checkbox" name="makita" id="makita-field" checked>
                   <label for="makita-field">MAKITA</label>
                 </li>
-                <li>
+                <li class="checkbox">
                   <input type="checkbox" name="dewalt" id="dewalt-field">
                   <label for="dewalt-field">DEWALT</label>
                 </li>
-                <li>
+                <li class="checkbox">
                   <input type="checkbox" name="hitachi" id="hitachi-field">
                   <label for="hitachi-field">HITACHI</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="group power">
+            <fieldset class="filter-group power">
               <legend>питание:</legend>
               <ul class="power-filter">
-                <li>
+                <li class="radio checked">
                   <label>
                     <input type="radio" value="battery">
                     Аккумуляторные
                   </label>
                 </li>
-                <li>
+                <li class="radio">
                   <label>
                     <input type="radio" value="net">
                     Сетевые
@@ -154,7 +154,7 @@
         </div>
         <div class="sort">
           <div class="sort-row fill">
-            <span>Сортировка:</span>
+            <span class="sort-title">Сортировка:</span>
             <ul class="sotr-type">
               <li class="action"><a href="#">по цене</a></li>
               <li><a href="#">по типу</a></li>
@@ -310,7 +310,7 @@
       </div>
     </div>
     <footer class="all-footer">
-      <footer class="footer-first">
+      <div class="footer-first">
         <div class="container">
           <div class="footer-contacts">
             <h2 class="h2">Техномарт</h2>
@@ -335,8 +335,8 @@
             </ul>
           </nav>
         </div>
-      </footer>
-      <footer class="footer-second">
+      </div>
+      <div class="footer-second">
         <div class="container">
           <div class="copyright">
             <p>
@@ -346,9 +346,9 @@
           </div>
           <div class="social">
             <ul>
-              <li><a href="#">ВКонтакте</a></li>
-              <li><a href="#">Фэйсбук</a></li>
-              <li><a href="#">Инстаграм</a></li>
+              <li><a class="social-btn-vk" href="#">ВКонтакте</a></li>
+              <li><a class="social-btn-fb" href="#">Фэйсбук</a></li>
+              <li><a class="social-btn-inst" href="#">Инстаграм</a></li>
             </ul>
           </div>
           <div class="feedback">
@@ -362,7 +362,7 @@
             </p>
           </div>
         </div>
-      </footer>
+      </div>
     </footer>
   </body>
 </html>
