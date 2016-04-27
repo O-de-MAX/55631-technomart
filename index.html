@@ -7,24 +7,22 @@
   </head>
   <body>
     <header class="all-header">
-      <header class="main-header">
+      <div class="header-first">
         <div class="container">
-          <span class="main-logo">
-            <h1 class="h1">техномарт</h1>
-          </span>
+          <span class="main-logo">техномарт</span>
           <div class="search">
             <i class="fa fa-icon"></i> <!--дописать имя иконки-->
             <form method="post">
-              <input type="search" name="header-search" placeholder="Поиск:">
+              <input class="search-form" type="search" name="header-search" placeholder="Поиск:">
             </form>
           </div>
           <div class="header-personale">
             <ul class="personale">
-              <li>
+              <li class="favorite">
                 <i class="fa fa-icon"></i> <!--дописать имя иконки-->
                 <a href="#">Закладки: 0</a>
               </li>
-              <li>
+              <li class="cart">
                 <i class="fa fa-icon"></i> <!--дописать имя иконки-->
                 <a href="#">Корзина: 0</a>
               </li>
@@ -34,8 +32,8 @@
             </ul>
           </div>
         </div>
-      </header>
-      <section class="main">
+      </div>
+      <div class="header-second">
         <div class="container">
           <section class="main-text">
             <p>
@@ -45,9 +43,7 @@
           <section class="main-contacts">
             <div class="telefone">
               <i class="fa fa-icon"></i> <!--дописать имя иконки-->
-              <p>
-                +7 (812) 555-05-55
-              </p>
+              <span>+7 (812) 555-05-55</span>
             </div>
               <p>
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -61,49 +57,35 @@
             <a href="#" class="reg">Регистрация</a>
           </section>
           <nav class="main-nav">
-            <ul class="nav">
-              <li>
-                <a href="#">Главная</a>
-              </li>
-              <li>
-                <a href="#">Компания</a>
-              </li>
-              <li>
-                <a href="#">Каталог</a>
-              </li>
-              <li>
-                <a href="#">Новости</a>
-              </li>
-              <li>
-                <a href="#">Спецпредложения</a>
-              </li>
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
         </div>
-      </section>
+      </div>
     </header>
     <section class="services">
       <div class="container">
         <div class="serv materials">
           <h3 class="h3">Материалы</h3>
           <a class="btn btn-serv" href="#">На любой вкус</a>
-          <img src="img/home_icon-materials.png" width="44" height="65" alt="Материалы">
+          <span class="services-icon icon-materials"></span>
         </div>
         <div class="serv tool">
           <h3 class="h3">Инструмент</h3>
           <a class="btn btn-serv" href="#">На все случаи</a>
-          <img src="img/home_icon-tool.png" width="75" height="61" alt="Инструмент">
+          <span class="services-icon icon-tool"></span>
         </div>
         <div class="serv machine">
           <h3 class="h3">Техника</h3>
           <a class="btn btn-serv" href="#">Для стройки</a>
-          <img src="img/home_icon-machine.png" width="78" height="62" alt="Техника">
+          <span class="services-icon icon-machin"></span>
         </div>
         <div class="serv-catalog">
           <div class="slider-foto">
@@ -114,6 +96,7 @@
                   <h2>Перфораторы</h2>
                   <p>Настоящие мужские игрушки</p>
                 </div>
+                <a class="btn" href="#">Открыть каталог</a>
               </li>
               <li>
                 <img src="img/home_second-foto.png" width="620" height="266" alt="Дрели" />
@@ -121,24 +104,24 @@
                   <h2>Дрели</h2>
                   <p>Соседям на радость!</p>
                 </div>
+                <a class="btn" href="#">Открыть каталог</a>
               </li>
             </ul>
           </div>
-            <div class="slider-paginator">
-              <a href="#">Назад</a>
-              <a href="#">Вперед</a>
-            </div>
-            <a class="btn" href="#">Открыть каталог</a>
+          <div class="slider-paginator">
+            <button class="btn slider-prev">назад</button>
+            <button class="btn slider-next">вперед</button>
+          </div>
         </div>
         <div class="serv sale50">
           <h3 class="h3">Скидки 50%</h3>
           <a class="btn btn-serv" href="#">на 350 товаров</a>
-          <img src="img/home_icon-sale50.png" width="59" height="72" alt="Скидки 50%">
+          <span class="services-icon icon-sale50"></span>
         </div>
         <div class="serv delivery">
           <h3 class="h3">Доставка</h3>
           <a class="btn btn-serv" href="#">Бесплатно</a>
-          <img src="img/home_icon-delivery.png" width="78" height="63" alt="Доставка">
+          <span class="services-icon icon-delivery"></span>
         </div>
       </div>
     </section>
@@ -227,12 +210,12 @@
         </p>
         <div class="slider-servis">
           <ul class="slider-servis-list">
-            <li class="slider-servis-delivery">Доставка</li>
+            <li class="slider-servis-delivery activ">Доставка</li>
             <li class="slider-servis-guarentee">Гарантия</li>
             <li class="slider-servis-credit">Кредит</li>
           </ul>
           <ul class="slider-servis-img">
-            <li class="servis-list">
+            <li class="servis-list activ">
               <h3 class="h3">Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо
@@ -287,12 +270,16 @@
           <a class="btn" href="#">Подробнее о компании</a>
         </article>
         <article class="map">
+          <h2 class="h2">контакты</h2>
+          <p>
+            Вы можете забрать товар сами, заехав в наш офис:
+          </p>
           <!--карта-->
         </article>
       </div>
     </section>
     <footer class="all-footer">
-      <footer class="footer-first">
+      <div class="footer-first">
         <div class="container">
           <div class="footer-contacts">
             <h2 class="h2">Техномарт</h2>
@@ -301,7 +288,7 @@
               +7 (812) 555-05-55
             </p>
           </div>
-          <div class="footer-nav">
+          <nav class="footer-nav">
             <ul class="nav-pages">
               <li><a href="#">Компания</a></li>
               <li><a href="#">Новости</a></li>
@@ -315,10 +302,10 @@
               <li><a href="#">Инструмент</a></li>
               <li><a href="#">Спецпредложения</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
-      </footer>
-      <footer class="footer-second">
+      </div>
+      <div class="footer-second">
         <div class="container">
           <div class="copyright">
             <p>
@@ -328,9 +315,9 @@
           </div>
           <div class="social">
             <ul>
-              <li><a href="#">ВКонтакте</a></li>
-              <li><a href="#">Фэйсбук</a></li>
-              <li><a href="#">Инстаграм</a></li>
+              <li><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
+              <li><a class="social-btn social-btn-fb" href="#">Фэйсбук</a></li>
+              <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
             </ul>
           </div>
           <div class="feedback">
@@ -344,7 +331,7 @@
             </p>
           </div>
         </div>
-      </footer>
+      </div>
     </footer>
   </body>
 </html>
