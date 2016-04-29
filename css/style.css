@@ -2,28 +2,55 @@ body {
 font-size: 17px;
 line-height: normal;
 font-weight: normal;
-font-family: Cuprum Regular;
+font-family: "Cuprum";
 color: black;
 }
-
 h1 {
   font-size: 24px;
   line-height: normal;
   font-weight: normal;
-  font-family: Cuprum Bold;
+  font-family: "Cuprum";
   color: black;
 }
 h2 {
   font-size: 30px;
   line-height: normal;
   font-weight: normal;
-  font-family: Cuprum Bold;
+  font-family: "Cuprum";
   color: black;
 }
 h3 {
   font-size: 30px;
   line-height: normal;
   font-weight: normal;
-  font-family: Cuprum Bold;
+  font-family: "Cuprum";
   color: black;
+}
+.clearfix {
+content: "";
+display: table;
+clear: both;
+}
+.header-first {
+  background-color: #293449
+}
+.container {
+  width: 920px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.main-logo {
+  width: 220px;
+  float: left;
+}
+.search {
+  width: 270px;
+  float: left;
+}
+.header-personale {
+  width: 450px;
+  float: right;
+}
+.personale {
+  list-style: none;
 }

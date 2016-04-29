@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="all-header">
-      <div class="header-first">
+      <div class="header-first clearfix">
         <div class="container">
           <span class="main-logo">техномарт</span>
           <div class="search">
@@ -76,6 +76,7 @@
           <h3 class="h3">Материалы</h3>
           <a class="btn btn-serv" href="#">На любой вкус</a>
           <span class="services-icon icon-materials"></span>
+          <span class="new">new</span>
         </div>
         <div class="serv tool">
           <h3 class="h3">Инструмент</h3>
@@ -109,8 +110,8 @@
             </ul>
           </div>
           <div class="slider-paginator">
-            <button class="btn slider-prev">назад</button>
-            <button class="btn slider-next">вперед</button>
+            <button class="btn-prev">назад</button>
+            <button class="btn-next">вперед</button>
           </div>
         </div>
         <div class="serv sale50">
@@ -141,7 +142,7 @@
               <img src="img/home_popular_1.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000" />
               <h4 class="h4">Перфоратор BOSCH <br> BFG 9000</h4>
               <div class="price-group">
-                <p class="old-price">32500 Р.</p>
+                <del class="old-price">32500 Р.</del>
                 <span class="new-price">25500 Р.</span>
               </div>
             </a>
@@ -151,7 +152,7 @@
               <img src="img/home_popular_2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000" />
               <h4 class="h4">Перфоратор BOSCH <br> BFG 3000</h4>
               <div class="price-group">
-                <p class="old-price">22500 Р.</p>
+                <del class="old-price">22500 Р.</del>
                 <span class="new-price">15500 Р.</span>
               </div>
             </a>
@@ -161,7 +162,7 @@
               <img src="img/home_popular_3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000" />
               <h4 class="h4">Перфоратор BOSCH <br> BFG 6000</h4>
               <div class="price-group">
-                <p class="old-price">30500 Р.</p>
+                <del class="old-price">30500 Р.</del>
                 <span class="new-price">25500 Р.</span>
               </div>
             </a>
@@ -190,14 +191,30 @@
           </div>
         </div>
         <ul class="brands-logo">
-          <li><img src="img/home_brands-bosch.jpg" width="126" height="37" alt="BOSCH" /></li>
-          <li><img src="img/home_brands_Makita.jpg" width="123" height="40" alt="Makita" /></li>
-          <li><img src="img/home_brands-DeWALT.jpg" width="146" height="44" alt="DeWALT" /></li>
-          <li><img src="img/home_brands_interskol.jpg" width="200" height="88" alt="Интерскол" /></li>
-          <li><img src="img/home_brands-Hitachi.jpg" width="169" height="31" alt="Hitachi" /></li>
-          <li><img src="img/home_brands-LG.jpg" width="121" height="73" alt="LG" /></li>
-          <li><img src="img/home_brands-AEG.jpg" width="151" height="96" alt="AEG" /></li>
-          <li><img src="img/home_brands-Metabo.jpg" width="204" height="69" alt="Metabo" /></li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands-bosch.jpg" width="126" height="37" alt="BOSCH"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands_Makita.jpg" width="123" height="40" alt="Makita"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands-DeWALT.jpg" width="146" height="44" alt="DeWALT"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands_interskol.jpg" width="200" height="88" alt="Интерскол"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands-Hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands-LG.jpg" width="121" height="73" alt="LG"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands-AEG.jpg" width="151" height="96" alt="AEG"></a>
+          </li>
+          <li>
+            <a class="logo-list" href="#"><img src="img/home_brands-Metabo.jpg" width="204" height="69" alt="Metabo"></a>
+          </li>
         </ul>
       </div>
     </section>
@@ -215,7 +232,7 @@
             <li class="slider-servis-credit">Кредит</li>
           </ul>
           <ul class="slider-servis-img">
-            <li class="servis-list activ">
+            <li class="servis-list servis-list-delivery activ">
               <h3 class="h3">Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо
@@ -223,9 +240,8 @@
                 Ведь мы неплохо заработаем,
                 поднимая его на ваш этаж.
               </p>
-              <img src="img/home_servis_logo_delivery.png" width="468" height="261" alt="Доставка" />
             </li>
-            <li class="servis-list">
+            <li class="servis-list servis-list-guarentee">
               <h3 class="h3">Гарантия</h3>
               <p>
                 Если купленный у нас товар поломается или заскрипит,
@@ -234,16 +250,14 @@
                 сгоревший товар на новый.
                 Дом уж восстановите как-нибудь сами.
               </p>
-              <img src="img/home_servis_logo_guarentee.png" width="389" height="263" alt="Гарантия" />
             </li>
-            <li class="servis-list">
+            <li class="servis-list servis-list-credit">
               <h3 class="h3">Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
               </p>
               <a href="#">Отправить заявку</a>
-              <img src="img/home_servis_logo_credit.png" width="465" height="285" alt="Кредит" />
             </li>
           </ul>
         </div>
