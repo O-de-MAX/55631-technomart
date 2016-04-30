@@ -13,7 +13,7 @@ h1 {
   color: black;
 }
 h2 {
-  font-size: 30px;
+  font-size: 18px;
   line-height: normal;
   font-weight: normal;
   font-family: "Cuprum";
@@ -31,26 +31,273 @@ content: "";
 display: table;
 clear: both;
 }
+.top-header {
+  margin-top: 0;
+  margin-bottom: 140px;
+}
 .header-first {
+  margin-bottom: 60px;
   background-color: #293449
 }
 .container {
-  width: 920px;
+  width: 940px;
   margin: 0 auto;
   padding: 0 10px;
 }
 .main-logo {
-  width: 220px;
   float: left;
+  width: 220px;
 }
 .search {
-  width: 270px;
   float: left;
+  width: 270px;
 }
 .header-personale {
+  float: right;
   width: 450px;
+  background-color: black;
+}
+.personale li {
+  display: inline-block;
+  list-style: none;
+}
+.header-second {
+  margin-bottom: 40px;
+}
+.main-text {
+  float: left;
+  width: 252px;
+  color: #ee3643;
+}
+.main-contacts {
+  float: left;
+  width: 300px;
+}
+.user-block {
+  float: right;
+  width: 300px;
+}
+.main-nav {
+  margin-bottom: 85px;
+  background-color: #293449
+}
+.main-nav li {
+  display: inline;
+  list-style: none;
+}
+.services {
+  margin-bottom: 30px;
+}
+.serv {
+  display: inline-block;
+  width: 300px;
+  height: 124px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.materials {
+  float: left;
+  background-color: #f6b22d;
+}
+.tool {
+  float: left;
+  background-color: #4aafde;
+}
+.machine {
+  float: left;
+  margin-right: 0;
+  background-color: #cc79d1;
+}
+.serv-catalog {
+  width: 620px;
+  height: 267px;
+  float: left;
+  /*для сетки*/
+  background-color: #9e8e7b;
+}
+.sale50 {
+  float: left;
+  margin-right: 0;
+  background-color: #85d179;
+}
+.delivery {
+  float: right;
+  margin-right: 0;
+  background-color: #f6b22d;
+}
+.popular-group {
+  margin-bottom: 20px;
+}
+.section-header {
+  margin-bottom: 20px;
+  /*для сетки*/
+  background-color: #ee3643;
+  height: 90px;
+}
+.col-section1 {
+  float: left;
+  width: 500px;
+}
+.col-section2 {
+  float: right;
+  width: 300px;
+}
+.popular-group {
+  margin-left: 0;
+  padding-left: 0;
+}
+.popular-card {
+  width: 220px;
+  height: 317px;
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  margin-right: 15px;
+  /*для сетки*/
+  background-color: #ee3643;
+}
+.popular-card:last-child {
+  margin-right: 0;
+}
+.brands-logo {
+  margin-left: 0;
+  padding-left: 0;
+}
+.brands-logo li {
+  width: 220px;
+  height: 145px;
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  /*для сетки*/
+  background-color: #ee3643;
+}
+.brands-logo li:nth-child(4n) {
+  margin-right: 0;
+}
+.brands {
+  margin-bottom: 17px;
+}
+.servis {
+  background-color: #ee3643;
+  padding: 65px 0 100px 0;
+
+}
+.slider-servis-list {
+  float: left;
+  width: 240px;
+}
+.slider-servis-img {
+  float: right;
+  width: 620px;
+}
+.about {
+  margin-bottom: 85px;
+}
+.about-us {
+  float: left;
+  width: 540px;
+}
+.map {
+  float: right;
+  width: 330px;
+}
+.footer-first {
+  background-color: #32425c;
+}
+.footer-contacts {
+  float: left;
+  width: 380px;
+}
+.footer-nav {
+  float: right;
+  width: 550px;
+}
+.nav-pages li {
+  display: inline;
+  list-style: none;
+}
+.nav-catalog li {
+  display: inline;
+  list-style: none;
+}
+.footer-second {
+  background-color:#293449;
+}
+.copyright {
+  float: left;
+  width: 240px;
+}
+.social {
+  float: left;
+  width: 150px;
+}
+.feedback {
+  float: right;
+  width: 300px;
+}
+.feedback p {
   float: right;
 }
-.personale {
+.user-block {
+  text-align: right;
+}
+.user-list {
+  display: inline;
   list-style: none;
+}
+.breadcrumbs {
+  margin-bottom: 55px;
+}
+.breadcrumbs li {
+  display: inline;
+  list-style: none;
+}
+.h1 {
+  margin-bottom: 65px;
+}
+.filters {
+  float: left;
+  width: 220px;
+}
+.sort {
+  float: right;
+  width: 700px;
+  margin-bottom: 125px;
+}
+.fill {
+  background-color: #ee3643;
+}
+.sort-row {
+  margin-bottom: 25px;
+}
+.sotr-type {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.sotr-type li {
+  display: inline;
+  list-style: none;
+}
+.product-card {
+  width: 220px;
+  height: 320px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  margin-bottom: 20px;
+/*для сетки*/
+  background-color: #ee3643;
+}
+.product-card:nth-child(3n) {
+  margin-right: 0px;
+}
+.paginator {
+  margin-top: 50px;
+}
+.about-perfor {
+  margin-bottom: 70px;
 }

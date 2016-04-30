@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="all-header">
-      <div class="header-first clearfix">
-        <div class="container">
+    <header class="top-header">
+      <div class="header-first">
+        <div class="container clearfix">
           <span class="main-logo">техномарт</span>
           <div class="search">
             <i class="fa fa-icon"></i> <!--дописать имя иконки-->
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="header-second">
-        <div class="container">
+        <div class="container clearfix">
           <section class="main-text">
             <p>
               Интернет-магазин строительных материалов и иснтрументов для ремонта
@@ -56,6 +56,8 @@
             </div>
             <a href="#" class="reg">Регистрация</a>
           </section>
+        </div>
+        <div class="container">
           <nav class="main-nav">
             <ul>
               <li><a href="#">Главная</a></li>
@@ -71,7 +73,7 @@
       </div>
     </header>
     <section class="services">
-      <div class="container">
+      <div class="container clearfix">
         <div class="serv materials">
           <h3 class="h3">Материалы</h3>
           <a class="btn btn-serv" href="#">На любой вкус</a>
@@ -88,7 +90,8 @@
           <a class="btn btn-serv" href="#">Для стройки</a>
           <span class="services-icon icon-machin"></span>
         </div>
-        <div class="serv-catalog">
+        <div class="serv serv-catalog">
+          <!--для сетки
           <div class="slider-foto">
             <ul>
               <li>
@@ -113,6 +116,7 @@
             <button class="btn-prev">назад</button>
             <button class="btn-next">вперед</button>
           </div>
+-->
         </div>
         <div class="serv sale50">
           <h3 class="h3">Скидки 50%</h3>
@@ -127,12 +131,12 @@
       </div>
     </section>
     <section class="popular">
-      <div class="container">
+      <div class="container clearfix">
         <div class="section-header">
-          <div class="col-section">
+          <div class="col-section1">
             <h2 class="h2">Популярные товары:</h2>
           </div>
-          <div class="col-section">
+          <div class="col-section2">
             <a class="btn" href="#">все популярные товары</a>
           </div>
         </div>
@@ -181,12 +185,12 @@
       </div>
     </section>
     <section class="brands">
-      <div class="container">
+      <div class="container clearfix">
         <div class="section-header">
-          <div class="col-section">
+          <div class="col-section1">
             <h2 class="h2">Популярные производители:</h2>
           </div>
-          <div class="col-section">
+          <div class="col-section2">
             <a class="btn" href="#">Все производители</a>
           </div>
         </div>
@@ -219,7 +223,7 @@
       </div>
     </section>
     <section class="servis">
-      <div class="container">
+      <div class="container clearfix">
         <h2 class="h2">Сервисы</h2>
         <p>
           Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -264,7 +268,7 @@
       </div>
     </section>
     <section class="about">
-      <div class="container">
+      <div class="container clearfix">
         <article class="about-us">
           <h2 class="h2">Компания "Техномарт"</h2>
           <p>
@@ -288,15 +292,16 @@
           <p>
             Вы можете забрать товар сами, заехав в наш офис:
           </p>
-          <!--карта-->
+          <img src="img/home_map.jpg" width="300" height="200" alt="Карта">
+          <button class="btn" type="button" name="write">Заблудились? Напишите нам!</button>
         </article>
       </div>
     </section>
     <footer class="all-footer">
       <div class="footer-first">
-        <div class="container">
+        <div class="container clearfix">
           <div class="footer-contacts">
-            <h2 class="h2">Техномарт</h2>
+            <span class="footer-logo">Техномарт</span>
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               +7 (812) 555-05-55
@@ -320,7 +325,7 @@
         </div>
       </div>
       <div class="footer-second">
-        <div class="container">
+        <div class="container clearfix">
           <div class="copyright">
             <p>
               2010-2016 Компания "Техномарт"<br>
