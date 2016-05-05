@@ -31,11 +31,11 @@ content: "";
 display: table;
 clear: both;
 }
-.top-header {
+.page-header {
   margin-top: 0;
   margin-bottom: 140px;
 }
-.header-first {
+.header-top {
   margin-bottom: 60px;
   background-color: #293449
 }
@@ -61,7 +61,7 @@ clear: both;
   display: inline-block;
   list-style: none;
 }
-.header-second {
+.header-bottom {
   margin-bottom: 40px;
 }
 .main-text {
@@ -204,7 +204,7 @@ clear: both;
   float: right;
   width: 330px;
 }
-.footer-first {
+.footer-top {
   background-color: #32425c;
 }
 .footer-contacts {
@@ -223,7 +223,7 @@ clear: both;
   display: inline;
   list-style: none;
 }
-.footer-second {
+.footer-bottom {
   background-color:#293449;
 }
 .copyright {
@@ -293,7 +293,7 @@ clear: both;
   background-color: #ee3643;
 }
 .product-card:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .paginator {
   margin-top: 50px;
