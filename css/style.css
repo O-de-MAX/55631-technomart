@@ -204,6 +204,22 @@ clear: both;
   float: right;
   width: 330px;
 }
+.modal-content {
+  position: absolute;
+  width: 620px;
+  border-top: 7px solid #ee3643;
+  background: #ffffff;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+}
+.modal-content-form {
+  margin: 40px 80px;
+}
+.write-us-top {
+  margin-bottom: 25px;
+
+}
+
 .footer-top {
   background-color: #32425c;
 }
