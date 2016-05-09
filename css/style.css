@@ -185,16 +185,27 @@ clear: both;
   float: right;
   width: 300px;
 }
-.catalog-item {
-  position: relative;
-  font-weight: 600;
-  width: 218px;
+.popular-items {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.catalog-item-wrap {
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  width: 25%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.catalog-item {
+  position: relative;
   text-align: center;
   border: 1px solid #e5e5e5;
-  margin-right: 15px;
-  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 16px;
 }
 .label-new {
   position: relative;
@@ -261,22 +272,17 @@ clear: both;
   display: block;
 }
 .catalog-item-image {
-  width: 218px;
-  height: 168px;
-  overflow: hidden;
-  line-height: 168px;
+  max-width: 100%;
+  height: auto;
   text-align: center;
 }
 .catalog-item-image img {
-  max-width: 100%;
   vertical-align: middle;
 }
-.catalog-item .h1 {
+.title-catalog-item {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 0 25px;
+  text-decoration: none;
 }
 .catalog-item .old-price {
   margin-bottom: 10px;
@@ -304,14 +310,6 @@ clear: both;
   border: 20px solid #ffffff;
   border-left-color: #ee3643;
 }
-.catalog-item:nth-child(3n+3) {
-  margin-right: 0;
-}
-
-.catalog-item:last-child {
-  margin-right: 0;
-}
-
 .logo-item {
   box-sizing: border-box;
   display: inline-block;
@@ -453,7 +451,7 @@ clear: both;
   float: left;
   width: 220px;
 }
-.sort {
+.catalog-page {
   float: right;
   width: 700px;
   margin-bottom: 125px;
@@ -472,6 +470,21 @@ clear: both;
 .sotr-type li {
   display: inline;
   list-style: none;
+}
+.catalog-item-pan {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.catalog-item-grid {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .paginator {
