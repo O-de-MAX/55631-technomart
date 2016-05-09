@@ -60,44 +60,24 @@ color: black;
 .icon-search::before { content: "🔍"; } /* "\1f50d" */
 .icon-bookmark::before { content: "🔖"; } /* "\1f516" */
 
-h1 {
-  font-size: 24px;
-  line-height: normal;
-  font-weight: normal;
-  font-family: "Cuprum";
-  color: black;
-}
-h2 {
-  font-size: 18px;
-  line-height: normal;
-  font-weight: normal;
-  font-family: "Cuprum";
-  color: black;
-}
-h3 {
-  font-size: 30px;
-  line-height: normal;
-  font-weight: normal;
-  font-family: "Cuprum";
-  color: black;
-}
 .clearfix {
 content: "";
 display: table;
 clear: both;
 }
-.page-header {
-  margin-top: 0;
-  margin-bottom: 140px;
-}
-.header-top {
-  margin-bottom: 60px;
-  background-color: #293449
-}
 .container {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
+}
+.page-header {
+  margin-top: 0;
+  padding-bottom: 60px;
+  background: #4bc1d2; /*f2f6f8*/
+}
+.header-top {
+  margin-bottom: 60px;
+  background-color: #293449;
 }
 .main-logo {
   float: left;
@@ -107,24 +87,27 @@ clear: both;
   float: left;
   width: 270px;
 }
-.header-personale {
+.header-personal {
   float: right;
   width: 450px;
-  background-color: black;
+  background: #ffffff; /*для сетки*/
 }
-.personale li {
+.personal {
   display: inline-block;
-  list-style: none;
+  margin-right: 0px;
+  text-align: right;
+  line-height: 43px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background: #ee3643; /*для сетки*/
+  text-decoration: none;
 }
-.header-bottom {
-  margin-bottom: 40px;
-}
-.main-text {
+.header-text {
   float: left;
   width: 252px;
   color: #ee3643;
 }
-.main-contacts {
+.header-contacts {
   float: left;
   width: 300px;
 }
@@ -140,15 +123,17 @@ clear: both;
   display: inline;
   list-style: none;
 }
-.services {
+.category-grid {
+  margin-top: 60px;
   margin-bottom: 30px;
 }
-.serv {
+.category {
   display: inline-block;
   width: 300px;
-  height: 124px;
+  height: 124px; /*убрать высоту, высота за счет падингов + бокс сайзинг для удобства*/
   margin-right: 20px;
   margin-bottom: 20px;
+  padding:
 }
 .materials {
   position: relative;
@@ -164,7 +149,7 @@ clear: both;
   margin-right: 0;
   background-color: #cc79d1;
 }
-.serv-catalog {
+.category-catalog {
   width: 620px;
   height: 267px;
   float: left;
@@ -183,6 +168,8 @@ clear: both;
 }
 .popular-group {
   margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
 }
 .section-header {
   margin-bottom: 20px;
@@ -198,41 +185,149 @@ clear: both;
   float: right;
   width: 300px;
 }
-.popular-group {
-  margin-left: 0;
-  padding-left: 0;
-}
-/* для варианта со списком
-.popular-card {
-  width: 220px;
-  height: 317px;
+.catalog-item {
+  position: relative;
+  font-weight: 600;
+  width: 218px;
   display: inline-block;
-  list-style: none;
   vertical-align: top;
+  text-align: center;
+  border: 1px solid #e5e5e5;
   margin-right: 15px;
+  margin-bottom: 20px;
 }
-*/
-.popular-card:last-child {
+.label-new {
+  position: relative;
+  overflow: hidden;
+}
+.label-new:before {
+  overflow: hidden;
+  position: absolute;
+  top: 6px;
+  right: -22px;
+  z-index: 10;
+  width: 83px;
+  height: 28px;
+  /*
+  content: "";
+  background: url(img/catalog_new_flag.png); - почему не получится так?
+  */
+  content: "new";
+  text-align: center;
+  line-height: 28px;
+  color: #ffffff;
+  font-size: 14px;
+  background: #ee3643;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.catalog-item .button-order {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: #ffffff;
+  display: none;
+}
+.button-order .btn-to-basket,
+.button-order .btn-to-bookmark {
+  font-size: 14px;
+  display: block;
+  width: 135px;
+  margin: 0 auto 7px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #63a63e;
+}
+.button-order .btn-to-basket {
+  box-shadow: inset 0 -3px 0 #367315;
+}
+.button-order .btn-to-bookmark {
+  width: 129px;
+  padding: 7px 0;
+  color: #63a63e;
+  border: 3px solid #63a63e;
+  background-color: #ffffff;
+}
+.catalog-item:hover .button-order {
+  display: block;
+}
+.catalog-item-image {
+  width: 218px;
+  height: 168px;
+  overflow: hidden;
+  line-height: 168px;
+  text-align: center;
+}
+.catalog-item-image img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.catalog-item .h1 {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 0 25px;
+}
+.catalog-item .old-price {
+  margin-bottom: 10px;
+  font-size: 17px;
+  text-decoration: line-through;
+  color: #999999;
+}
+.catalog-item .new-price {
+  position: relative;
+  width: 80px;
+  font-size: 17px;
+  margin: 0 auto 20px;
+  padding: 10px 30px;
+  color: #ffffff;
+  border-radius: 3px;
+  background: #ee3643;
+}
+.catalog-item .new-price:after {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  content: "";
+  border: 20px solid #ffffff;
+  border-left-color: #ee3643;
+}
+.catalog-item:nth-child(3n+3) {
   margin-right: 0;
 }
 
-.logo-list {
+.catalog-item:last-child {
+  margin-right: 0;
+}
+
+.logo-item {
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
   margin-right: 15px;
   margin-bottom: 15px;
-  border: 1px solid #e5e5e5;
-}
-.logo-list:nth-child(4n) {
-  margin-right: 0;
-}
-.brands-logo .logo-list-image {
   width: 218px;
   height: 143px;
   line-height: 143px;
   text-align: center;
+  border: 1px solid #e5e5e5;
 }
-.logo-list img {
+.logo-item:nth-child(4n) {
+  margin-right: 0;
+}
+.logo-item img {
  vertical-align: middle;
 }
 /*
@@ -281,6 +376,7 @@ clear: both;
   float: right;
   width: 330px;
 }
+/*для картинок - высота  -авто, ширина в %*/
 .modal-content {
   position: absolute;
   width: 620px;
@@ -331,9 +427,11 @@ clear: both;
   float: right;
   width: 300px;
 }
+/*
 .feedback p {
   float: right;
 }
+*/
 .user-block {
   text-align: right;
 }
@@ -375,121 +473,7 @@ clear: both;
   display: inline;
   list-style: none;
 }
-.product-card {
-  position: relative;
-  font-weight: 600;
-  width: 218px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  border: 1px solid #e5e5e5;
-  margin-right: 15px;
-  margin-bottom: 20px;
-}
-.new:before {
-  position: absolute;
-  top: 6px;
-  right: -22px;
-  z-index: 10;
-  width: 83px;
-  height: 28px;
-  /*
-  content: "";
-  background: url(img/catalog_new_flag.png); - почему не получится так?
-  */
-  content: "new";
-  text-align: center;
-  line-height: 28px;
-  color: #ffffff;
-  font-size: 14px;
-  background: #ee3643;
-  overflow: hidden;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-}
-.product-card .button-order {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 218px;
-  height: 88px;
-  padding: 40px 0;
-  background-color: #ffffff;
-  display: none;
-}
-.button-order .btn-to-basket,
-.button-order .btn-to-bookmark {
-  font-size: 14px;
-  display: block;
-  width: 135px;
-  margin: 0 auto 7px;
-  padding: 10px 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-  border-radius: 3px;
-  background-color: #63a63e;
-}
-.button-order .btn-to-basket {
-  box-shadow: inset 0 -3px 0 #367315;
-}
-.button-order .btn-to-bookmark {
-  width: 129px;
-  padding: 7px 0;
-  color: #63a63e;
-  border: 3px solid #63a63e;
-  background-color: #ffffff;
-}
-.product-card:hover .button-order {
-  display: block;
-}
-.product-card-image {
-  width: 218px;
-  height: 168px;
-  overflow: hidden;
-}
-.product-card-image img {
-  max-width: 100%;
-}
-.product-card .h2 {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 0 25px;
-}
-.product-card .old-price {
-  margin-bottom: 10px;
-  font-size: 17px;
-  text-decoration: line-through;
-  color: #999999;
-}
-.product-card .new-price {
-  position: relative;
-  width: 80px;
-  font-size: 17px;
-  margin: 0 auto 20px;
-  padding: 10px 30px;
-  color: #ffffff;
-  border-radius: 3px;
-  background: #ee3643;
-}
-.product-card .new-price:after {
-  position: absolute;
-  top: 0;
-  right: -20px;
-  width: 0;
-  height: 0;
-  content: "";
-  border: 20px solid #ffffff;
-  border-left-color: #ee3643;
-}
-.product-card:nth-child(3n+3) {
-  margin-right: 0;
-}
+
 .paginator {
   margin-top: 50px;
 }
