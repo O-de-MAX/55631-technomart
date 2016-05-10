@@ -91,8 +91,8 @@
           <div class="filters">
             <span class="filter-title fill">Фильтр:</span>
             <form class="filter-form" action="index.html" method="post">
-              <fieldset class="filter-group prise">
-                <legend>цена:</legend>
+              <div class="filter-group prise">
+                <h2 class="filters-title">цена:</h2>
                 <div class="price-slider fill">
                   <div class="track">
                     <div class="handle"></div>
@@ -105,45 +105,31 @@
                   <span>-</span>
                   <input class="text-range fill" type="text" value="50000">
                 </div>
-              </fieldset>
-              <fieldset class="filter-group brands">
-                <legend>производители:</legend>
+              </div>
+              <div class="filter-group brands">
+                <h2 class="filters-title">производители:</h2>
                 <div class="brands-filter">
-                  <label  class="checkbox">
-                    <input type="checkbox" name="bosch" checked>
-                    BOSCH
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" name="interskol">
-                    ИНТЕРСКОЛ
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" name="makita" checked>
-                    MAKITA
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" name="dewalt">
-                    DEWALT
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" name="hitachi">
-                    HITACHI
-                  </label>
+                  <input type="checkbox" name="bosch" id="checkbox1" checked>
+                  <label  class="checkbox" for="checkbox1">BOSCH</label>
+                  <input type="checkbox" name="interskol" id="checkbox2">
+                  <label class="checkbox" for="checkbox2">ИНТЕРСКОЛ</label>
+                  <input type="checkbox" name="makita" id="checkbox3" checked>
+                  <label for="checkbox3" class="checkbox">MAKITA</label>
+                  <input type="checkbox" name="dewalt" id="checkbox4">
+                  <label for="checkbox4" class="checkbox">DEWALT</label>
+                  <input type="checkbox" name="hitachi" id="checkbox5">
+                  <label for="checkbox5" class="checkbox">HITACHI</label>
                 </div>
-              </fieldset>
-              <fieldset class="filter-group power">
-                <legend>питание:</legend>
+              </div>
+              <div class="filter-group power">
+                <h2 class="filters-title">питание:</h2>
                 <div class="power-filter">
-                  <label class="radio">
-                    <input type="radio" name="power" value="battery" checked>
-                    Аккумуляторные
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="power" value="net">
-                    Сетевые
-                  </label>
+                  <input type="radio" name="power" value="battery" id="radio1" checked>
+                  <label class="radio" for="radio1">Аккумуляторные</label>
+                  <input type="radio" name="power" value="net" id="radio2">
+                  <label class="radio" for="radio2">Сетевые</label>
                 </div>
-              </fieldset>
+              </div>
               <button class="btn filters-btn" type="submit" name="filters-button">Показать</button>
             </form>
           </div>
@@ -391,7 +377,7 @@
             </p>
           </div>
           <div class="social">
-            <ul>
+            <ul  class="social-list">
               <li><a class="social-btn" href="#"><i class="icon icon-vk"></i></a></li>
               <li><a class="social-btn" href="#"><i class="icon icon-facebook"></i></a></li>
               <li><a class="social-btn" href="#"><i class="icon icon-instagramm"></i></a></li>

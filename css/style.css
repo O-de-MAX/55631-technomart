@@ -10,8 +10,8 @@ color: black;
   font-style: normal;
 
   font-family: "symbols-technomart";
-  src: url("fonts/symbols-technomart.woff") format("woff"),
-       url("fonts/symbols-technomart.woff2") format("woff2");
+  src: url("../fonts/symbols-technomart.woff") format("woff"),
+       url("../fonts/symbols-technomart.woff2") format("woff2");
 }
 
 [class^="icon-"]::before,
@@ -129,6 +129,7 @@ clear: both;
 }
 .category {
   display: inline-block;
+  position: relative;
   width: 300px;
   height: 124px; /*убрать высоту, высота за счет падингов + бокс сайзинг для удобства*/
   margin-right: 20px;
@@ -166,6 +167,49 @@ clear: both;
   margin-right: 0;
   background-color: #f6b22d;
 }
+
+.category-icon-sprite {
+  position: absolute;
+  top: 35px; /*для каждой картинки отдельные значение, по макету, но учесть падинги для разноцветных блоков*/
+  left: 210px;
+  background-image: url("../img/home_icon_sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-icon-delivery {
+  width: 78px;
+  height: 63px;
+  background-position: -5px -5px;
+}
+
+.sprite-icon-machine {
+  width: 78px;
+  height: 62px;
+  background-position: -5px -78px;
+}
+
+.sprite-icon-materials {
+  width: 44px;
+  height: 65px;
+  background-position: -5px -150px;
+}
+
+.sprite-icon-sale50 {
+  width: 59px;
+  height: 72px;
+  background-position: -5px -225px;
+}
+
+.sprite-icon-tool {
+  width: 75px;
+  height: 61px;
+  background-position: -5px -307px;
+}
+
+
+
+
 .popular-group {
   margin-bottom: 20px;
   margin-left: 0;
@@ -328,28 +372,6 @@ clear: both;
 .logo-item img {
  vertical-align: middle;
 }
-/*
-.brands-logo {
-  margin-left: 0;
-  padding-left: 0;
-}
-.brands-logo li {
-  width: 220px;
-  height: 145px;
-  display: inline-block;
-  list-style: none;
-  vertical-align: top;
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
-.brands-logo li:nth-child(4n) {
-  margin-right: 0;
-}
-.brands {
-  margin-bottom: 17px;
-}
-*/
-
 .servis {
   background-color: #ee3643;
   padding: 65px 0 100px 0;
@@ -419,7 +441,35 @@ clear: both;
 }
 .social {
   float: left;
-  width: 150px;
+  width: 300px;
+}
+.social-list {
+  margin-left: 0;
+}
+.social-list li {
+  list-style: none;
+  display: inline;
+}
+.social-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 41px;
+  height: 41px;
+  border-radius: 20px;
+  background: #212a3a;
+  position: relative;
+  text-align: center;
+}
+.social-btn .icon {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 41px;
+}
+.social-btn:hover {
+  background: #ee3643;
+}
+.social-btn:active {
+  background: #ee3643;
 }
 .feedback {
   float: right;
@@ -450,6 +500,49 @@ clear: both;
 .filters {
   float: left;
   width: 220px;
+}
+.filter-group {
+
+}
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+  display: none;
+}
+.checkbox, .radio {
+  display: block;
+  margin: 20px 0;
+  line-height: 30px;
+  padding-left: 35px;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox::before {
+  content: "\2610";
+  font-family: "symbols-technomart";
+  font-size: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 28px;
+  height: 28px;
+}
+input[type="checkbox"]:checked + .checkbox::before {
+  content: "\2611";
+}
+.radio::before {
+  content: "\25cb";
+  font-family: "symbols-technomart";
+  font-size: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 28px;
+  height: 28px;
+}
+input[type="radio"]:checked + .radio::before {
+  content: "\25cf";
 }
 .catalog-page {
   float: right;

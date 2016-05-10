@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
@@ -70,17 +71,17 @@
         <div class="category materials label-new">
           <h3 class="h3">Материалы</h3>
           <a class="btn btn-category" href="#">На любой вкус</a>
-          <span class="category-icon icon-materials"></span>
+          <span class="category-icon-sprite sprite-icon-materials"></span>
         </div>
         <div class="category tool">
           <h3 class="h3">Инструмент</h3>
           <a class="btn btn-category" href="#">На все случаи</a>
-          <span class="category-icon icon-tool"></span>
+          <span class="category-icon-sprite sprite-icon-tool "></span>
         </div>
         <div class="category machine">
           <h3 class="h3">Техника</h3>
           <a class="btn btn-category" href="#">Для стройки</a>
-          <span class="category-icon icon-machin"></span>
+          <span class="category-icon-sprite sprite-icon-machine"></span>
         </div>
         <div class="category category-catalog">
           <!--для сетки
@@ -113,12 +114,12 @@
         <div class="category sale50">
           <h3 class="h3">Скидки 50%</h3>
           <a class="btn btn-category" href="#">на 350 товаров</a>
-          <span class="category-icon icon-sale50"></span>
+          <span class="category-icon-sprite sprite-icon-sale50"></span>
         </div>
         <div class="category delivery">
           <h3 class="h3">Доставка</h3>
           <a class="btn btn-category" href="#">Бесплатно</a>
-          <span class="category-icon icon-delivery"></span>
+          <span class="category-icon-sprite sprite-icon-delivery"></span>
         </div>
       </div>
     </section>
@@ -360,7 +361,7 @@
             </p>
           </div>
           <div class="social">
-            <ul>
+            <ul  class="social-list">
               <li><a class="social-btn" href="#"><i class="icon icon-vk"></i></a></li>
               <li><a class="social-btn" href="#"><i class="icon icon-facebook"></i></a></li>
               <li><a class="social-btn" href="#"><i class="icon icon-instagramm"></i></a></li>
@@ -392,10 +393,8 @@
             <input type="text" name="password" placeholder="Для отправки ответа">
           </label>
         </div>
-        <label class="write-us write-us-text">
-          Текст письма:
-          <input class="write-us-letter" type="text" name="text" placeholder="В свободной форме"> <!--это текст ареа-->
-        </label>
+        <label class="write-us write-us-text" for="feedback-letter">Текст письма:</label>
+        <textarea class="write-us-letter" type="text" name="text" id="feedback-letter">В свободной форме</textarea>
         <button class="btn" type="submit">Отправить</button>
       </form>
     </div>
