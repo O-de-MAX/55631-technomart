@@ -2,7 +2,7 @@ body {
 font-size: 17px;
 line-height: normal;
 font-weight: normal;
-font-family: "Cuprum";
+font-family: "Cuprum", "Arial", sans-serif;
 color: black;
 }
 @font-face {
@@ -70,42 +70,97 @@ clear: both;
   margin: 0 auto;
   padding: 0 10px;
 }
+.icon {
+  opacity: 0.3;
+}
 .page-header {
   margin-top: 0;
   padding-bottom: 60px;
   background: #4bc1d2; /*f2f6f8*/
 }
 .header-top {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   background-color: #293449;
+  color: #ffffff;
 }
 .main-logo {
+  position: relative;
   float: left;
   width: 220px;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  text-align: center;
+  padding: 8px 0;
+}
+.main-logo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  height: 5px;
+  background-color: #8e1e26;
+}
+.main-logo:hover, .main-logo:active {
+  background-color: #ca2c37;
 }
 .search {
   float: left;
-  width: 270px;
+  width: 250px;
+}
+.icon-search {
+  padding: 0 10px;
+}
+.search-form {
+
+
 }
 .header-personal {
   float: right;
   width: 450px;
-  background: #ffffff; /*для сетки*/
+  font-size: 0;
 }
 .personal {
+  font-size: 17px;
   display: inline-block;
-  margin-right: 0px;
-  text-align: right;
-  line-height: 43px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background: #ee3643; /*для сетки*/
+  vertical-align: top;
+  text-align: center;
+  width: 33.3%;
   text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+  padding: 12px 0;
+}
+.personal-order {
+  background: #63a63e;
+}
+.personal-order:hover {
+  background: #5fbb2d;
+}
+.personal-order:active {
+  background: #518534;
+}
+.personal:hover > .icon {
+  opacity: 1;
+}
+.personal-cart:hover,
+.personal-bookmark:hover {
+  background: #212a3a;
+}
+.personal-cart:active,
+.personal-bookmark:active {
+  background: #212a3a;
+  opacity: 0.3;
 }
 .header-text {
   float: left;
-  width: 252px;
+  width: 200px;
+  font-size: 16px;
+  font-style: italic;
   color: #ee3643;
+  padding: 0 70px 0 50px;
+  line-height: 23px;
 }
 .header-contacts {
   float: left;
@@ -129,9 +184,10 @@ clear: both;
 }
 .category {
   display: inline-block;
+  box-sizing: border-box;
   position: relative;
   width: 300px;
-  height: 124px; /*убрать высоту, высота за счет падингов + бокс сайзинг для удобства*/
+  /*height: 124px; убрать высоту, высота за счет падингов + бокс сайзинг для удобства*/
   margin-right: 20px;
   margin-bottom: 20px;
   padding:
