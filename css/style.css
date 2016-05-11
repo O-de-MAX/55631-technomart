@@ -412,7 +412,6 @@ clear: both;
 .section-header {
   margin-bottom: 20px;
   background-color: #f7f3ec;
-  height: 90px;
 }
 .section-title {
   margin: 0;
@@ -425,16 +424,17 @@ clear: both;
 }
 .col-section1 {
   float: left;
-  width: 500px;
+  width: 640px;
 }
 .col-section2 {
   float: right;
   width: 300px;
 }
 .btn-section {
+  box-sizing: border-box;
   width: 255px;
   background: #ee3643;
-  margin: 25px 10px;
+  margin: 25px 20px;
 }
 .btn-section:hover,
 .btn-slider:hover {
@@ -443,6 +443,9 @@ clear: both;
 .btn-section:active,
 .btn-slider:active {
   background: #ba2732;
+}
+.popular {
+  margin-bottom: 20px;
 }
 .popular-items {
   box-sizing: border-box;
@@ -462,8 +465,8 @@ clear: both;
   position: relative;
   text-align: center;
   border: 1px solid #e5e5e5;
-  padding: 20px;
   font-size: 16px;
+  font-weight: 600;
 }
 .label-new {
   position: relative;
@@ -477,10 +480,6 @@ clear: both;
   z-index: 10;
   width: 83px;
   height: 28px;
-  /*
-  content: "";
-  background: url(img/catalog_new_flag.png); - почему не получится так?
-  */
   content: "new";
   text-align: center;
   line-height: 28px;
@@ -506,6 +505,7 @@ clear: both;
 .button-order .btn-to-basket,
 .button-order .btn-to-bookmark {
   font-size: 14px;
+  font-weight: normal;
   display: block;
   width: 135px;
   margin: 0 auto 7px;
@@ -522,37 +522,70 @@ clear: both;
 .button-order .btn-to-bookmark {
   width: 129px;
   padding: 7px 0;
-  color: #63a63e;
+  color: #000000;
   border: 3px solid #63a63e;
   background-color: #ffffff;
 }
-.catalog-item:hover .button-order {
-  display: block;
+.icon-basket {
+  margin-right: 15px;
+  margin-left: -35px;
+}
+.btn-to-basket:hover {
+  background: #5fbb2d;
+}
+.btn-to-basket:hover .icon-basket {
+  opacity: 1;
+}
+.btn-to-basket:active {
+  background: #518534;
+}
+.btn-to-basket:active .icon-basket {
+  opacity: 1;
+}
+.btn-to-bookmark:hover {
+  border: 3px solid #000000;
+}
+.btn-to-bookmark:active {
+  border: 3px solid #000000;
+  opacity: 0.3;
 }
 .catalog-item-image {
-  max-width: 100%;
-  height: auto;
+  width: 218px;
+  height: 168px;
   text-align: center;
+  overflow: hidden;
 }
 .catalog-item-image img {
-  vertical-align: middle;
+  max-width: 100%;
+  margin-top: 25px;
 }
 .title-catalog-item {
+  display: inline-block;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 0 25px;
   text-decoration: none;
 }
 .catalog-item .old-price {
   margin-bottom: 10px;
   font-size: 17px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
   text-decoration: line-through;
   color: #999999;
 }
 .catalog-item .new-price {
   position: relative;
   width: 80px;
+  font-family: "PT Sans", sans-serif;
   font-size: 17px;
+  font-weight: bold;
   margin: 0 auto 20px;
-  padding: 10px 30px;
+  padding: 8px 30px;
   color: #ffffff;
   border-radius: 3px;
   background: #ee3643;
@@ -564,16 +597,25 @@ clear: both;
   width: 0;
   height: 0;
   content: "";
-  border: 20px solid #ffffff;
+  border: 19px solid #ffffff;
   border-left-color: #ee3643;
+}
+.catalog-item:hover .button-order {
+  display: block;
+}
+.catalog-item:hover {
+  box-shadow: 0 0 25px 0 #818181;
+}
+.brands-items {
+  font-size: 0;
 }
 .logo-item {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  width: 218px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 220px;
   height: 143px;
   line-height: 143px;
   text-align: center;
@@ -585,6 +627,17 @@ clear: both;
 .logo-item img {
  vertical-align: middle;
 }
+.logo-item:hover {
+  box-shadow: 0 0 25px 0 #818181;
+}
+.logo-item:active {
+  box-shadow: 0 0 20px -5px #818181;
+  opacity: 0.5;
+}
+
+
+
+
 .servis {
   background-color: #ee3643;
   padding: 65px 0 100px 0;
