@@ -2,7 +2,7 @@ body {
 font-size: 17px;
 line-height: normal;
 font-weight: normal;
-font-family: "Cuprum", "Arial", sans-serif;
+font-family: "CuprumRegular", sans-serif;
 color: black;
 }
 @font-face {
@@ -71,12 +71,13 @@ clear: both;
   padding: 0 10px;
 }
 .icon {
+  font-size: 17px;
   opacity: 0.3;
 }
 .page-header {
   margin-top: 0;
   padding-bottom: 60px;
-  background: #4bc1d2; /*f2f6f8*/
+  background: #f1f5f7; /*f2f6f8*/
 }
 .header-top {
   margin-bottom: 50px;
@@ -89,7 +90,7 @@ clear: both;
   width: 220px;
   font-size: 24px;
   text-transform: uppercase;
-  background-color: #ee3643;
+  background: #ee3643;
   text-align: center;
   padding: 8px 0;
 }
@@ -107,14 +108,29 @@ clear: both;
 }
 .search {
   float: left;
-  width: 250px;
+  /*width: 270px;*/
+}
+.search > label,
+.search > input {
+  display: inline-block;
 }
 .icon-search {
   padding: 0 10px;
 }
 .search-form {
-
-
+  border: none;
+  line-height: 42px;
+  background: #293449;
+  color: #ffffff;
+}
+.search-form input[type="search"] {
+  color: #ffffff;
+  opacity: 1;
+}
+/*как сделать стили при наведении и клике для всей формы сразу?...*/
+.search form:hover {
+  background: #212a3a;
+  opacity: 1;
 }
 .header-personal {
   float: right;
@@ -164,7 +180,24 @@ clear: both;
 }
 .header-contacts {
   float: left;
-  width: 300px;
+  width: 270px;
+}
+.header-contacts-telefone {
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+  padding: 5px 10px;
+}
+.icon-phone {
+  font-size: 22px;
+}
+.header-contacts-telefone span {
+  font-size: 21px;
+  color: #e9292a;
+  padding: 0 10px;
+}
+.header-contacts-address {
+  font-size: 14px;
+  color: #32425c;
 }
 .user-block {
   float: right;
