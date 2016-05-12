@@ -77,7 +77,7 @@ clear: both;
 .page-header {
   margin-top: 0;
   padding-bottom: 57px;
-  background: #f1f5f7; /*f2f6f8*/
+  background: #f1f5f7;
 }
 .header-top {
   margin-bottom: 50px;
@@ -108,7 +108,6 @@ clear: both;
 }
 .search {
   float: left;
-  /*width: 270px;*/
 }
 .search > label,
 .search > input {
@@ -117,21 +116,48 @@ clear: both;
 .icon-search {
   padding: 0 10px;
 }
-.search-form {
+.search-line {
+  width: 220px;
   border: none;
-  line-height: 42px;
+  outline: none;
+  line-height: 41px;
   background: #293449;
   color: #ffffff;
 }
-.search-form input[type="search"] {
-  color: #ffffff;
+.search-line::-webkit-input-placeholder {
+  color:#ffffff;
   opacity: 1;
+  text-overflow:ellipsis;
 }
-/*как сделать стили при наведении и клике для всей формы сразу?...*/
-.search form:hover {
+.search-line::-moz-placeholder {
+  color:#ffffff;
+  opacity: 1;
+  text-overflow:ellipsis;
+  }
+.search-line:-ms-input-placeholder {
+  color:#ffffff;
+  opacity: 1;
+  text-overflow:ellipsis;
+}
+.search-form:hover {
   background: #212a3a;
+  border: none;
+}
+.search-form:hover .icon-search {
   opacity: 1;
 }
+.search-form:hover .search-line {
+  background: #212a3a;
+}
+
+.search-form .search-line:focus {
+  background: #ffffff;
+  color: #000000;
+  cursor: auto;
+}
+
+/*изменить цвет лупы и фона у лупы при фокусе? как?*/
+
 .header-personal {
   float: right;
   width: 450px;
@@ -247,7 +273,7 @@ clear: both;
   border-bottom: 5px solid #1d2739;
 }
 
-/*
+/* второй вариант реализации, какой корректнее?
 .main-nav ul::after {
   content: "";
   position: absolute;
@@ -287,8 +313,115 @@ clear: both;
   width: 300px;
   margin-right: 20px;
   margin-bottom: 20px;
+  padding: 24px;
+}
+.category-catalog {
+  position: relative;
+  width: 620px;
+  height: 270px;
+  float: left;
+}
+.slider-controls {
+  position: absolute;
+  bottom: 35px;
+  right: 270px;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  z-index: 999;
+}
+/*
+.slider-controls input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+*/
+.slider-radio::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 4px;
+  background: #ffffff;
+  border:2px solid #ffffff;
+  vertical-align: bottom;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-radio:checked ~ .slider-radio::before {
+  background: #ee3643;
+}
+.slider-control-left,
+.slider-control-right {
+  position: absolute;
+  bottom: 110px;
+  z-index: 1000;
+}
+.slider-control-left {
+  left: 0px;
+}
+.slider-control-right {
+  right: 0px;
+}
+.icon-right,
+.icon-left {
+  display: inline-block;
+  font-size: 45px;
+  color: #ffffff;
+}
+.category-slide {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.slide-text {
+  max-width: 300px;
+  color: #ffffff;
   padding: 25px;
 }
+.slide-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.slide-text p {
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+}
+.btn-slider {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  width: 195px;
+  background: #ee3643;
+}
+.category-slide:nth-child(1) {
+  background-image:url("../img/home_first-foto.png");
+  background-repeat:no-repeat;
+}
+.category-slide:nth-child(2) {
+  background-image:url("../img/home_second-foto.png");
+  background-repeat:no-repeat;
+}
+.category-slide {
+  display:none;
+}
+.category-slide:nth-child(1) {
+  display:block;
+}
+#foto-1:checked ~ .category-slide:nth-child(1) {
+  display: block;
+}
+#foto-2:checked ~ .category-slide:nth-child(2) {
+  display: block;
+}
+
+/*переключатель слайдов? как?*/
+
 .category-title {
   font-size: 24px;
   color: #ffffff;
@@ -309,13 +442,6 @@ clear: both;
   margin-right: 0;
   background-color: #cc79d1;
 }
-.category-catalog {
-  width: 620px;
-  height: 270px;
-  float: left;
-  /*для сетки*/
-  background-color: #9e8e7b;
-}
 .sale50 {
   float: left;
   margin-right: 0;
@@ -327,11 +453,10 @@ clear: both;
   background-color: #f6b22d;
 }
 .btn {
-  display: inline-block;
-  padding: 7px;
+  display: block;
+  padding: 7px 0;
   font-size: 14px;
   line-height: 24px;
-  vertical-align: top;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
@@ -342,24 +467,19 @@ clear: both;
 }
 .btn-category {
   width: 123px;
-  background:
-  rgba(229,229,229,0.1);
+  background:rgba(229,229,229,0.1);
 }
 .btn-category:hover {
-  background:
-  rgba(229,229,229,0.2);
+  background:rgba(229,229,229,0.2);
 }
 .btn-category:active {
-  background:
-  rgba(229,229,229,0.3);
+  background:rgba(229,229,229,0.3);
 }
-
 .category-icon-sprite {
   background-image: url("../img/home_icon_sprite.png");
   background-repeat: no-repeat;
   display: block;
 }
-
 .sprite-icon-delivery {
   position: absolute;
   top: 30px;
@@ -400,10 +520,6 @@ clear: both;
   height: 61px;
   background-position: -5px -307px;
 }
-
-
-
-
 .popular-group {
   margin-bottom: 20px;
   margin-left: 0;
@@ -468,6 +584,9 @@ clear: both;
   font-size: 16px;
   font-weight: 600;
 }
+
+/* разная высота карточек каталога? как? */
+
 .label-new {
   position: relative;
   overflow: hidden;

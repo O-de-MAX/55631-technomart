@@ -12,9 +12,9 @@
         <div class="container clearfix">
           <a><span class="main-logo">техномарт</span></a>
           <div class="search">
-            <form>
+            <form class="search-form">
               <label for="site-search"><i class="icon icon-search"></i></label>
-              <input class="search-form" type="search" name="header-search" id="site-search" placeholder="Поиск:">
+              <input class="search-line" type="search" name="header-search" id="site-search" placeholder="Поиск:">
             </form>
           </div>
           <div class="header-personal">
@@ -84,32 +84,40 @@
           <span class="category-icon-sprite sprite-icon-machine"></span>
         </div>
         <div class="category category-catalog">
-          <!--для сетки
-          <div class="slider-foto">
-            <ul>
-              <li>
-                <img src="img/home_first-foto.png" width="620" height="266" alt="Перфораторы" />
-                <div class="slider-text">
-                  <h2>Перфораторы</h2>
+          <div class="category-slider">
+
+            <label class="slider-control-left" for="foto-1">
+              <i class="icon-left"></i>
+            </label>
+            <label class="slider-control-right" for="foto-2">
+              <i class="icon-right"></i>
+            </label>
+
+
+            <div class="slider-controls">
+              <input class="slider-radio" type="radio" id="foto-1" name="home-foto" checked>
+              <input class="slider-radio" type="radio" id="foto-2" name="home-foto">
+            </div>
+
+
+
+            <div class="category-slides">
+              <div class="category-slide">
+                <div class="slide-text">
+                  <div class="slide-title">Перфораторы</div>
                   <p>Настоящие мужские игрушки</p>
+                  <a class="btn btn-slider" href="#">Открыть каталог</a>
                 </div>
-                <a class="btn btn-slider" href="#">Открыть каталог</a>
-              </li>
-              <li>
-                <img src="img/home_second-foto.png" width="620" height="266" alt="Дрели" />
-                <div class="slider-text">
-                  <h2>Дрели</h2>
+              </div>
+              <div class="category-slide">
+                <div class="slide-text">
+                  <div class="slide-title">Дрели</div>
                   <p>Соседям на радость!</p>
+                  <a class="btn btn-slider" href="#">Открыть каталог</a>
                 </div>
-                <a class="btn" href="#">Открыть каталог</a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-          <div class="slider-paginator">
-            <button class="btn-prev">назад</button>
-            <button class="btn-next">вперед</button>
-          </div>
--->
         </div>
         <div class="category sale50">
           <h3 class="category-title">Скидки 50%</h3>
