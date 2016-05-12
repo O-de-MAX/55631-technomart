@@ -13,8 +13,9 @@
           <a><span class="main-logo">техномарт</span></a>
           <div class="search">
             <form class="search-form">
-              <label for="site-search"><i class="icon icon-search"></i></label>
-              <input class="search-line" type="search" name="header-search" id="site-search" placeholder="Поиск:">
+              <input class="search-input" type="submit" value="" id="submit1">
+              <input class="search-line" type="search" name="header-search" placeholder="Поиск:">
+              <label  class="search-submit" for="submit1"></label>
             </form>
           </div>
           <div class="header-personal">
@@ -256,9 +257,11 @@
             </a>
           </div>
         </section>
-        <section class="servis">
-          <h2 class="section-title">Сервисы</h2>
-          <p>
+      </div>
+      <section class="servis">
+        <div class="container clearfix">
+          <h2 class="servis-title">Сервисы</h2>
+          <p class="homepage-content">
             Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
@@ -271,7 +274,7 @@
             <ul class="slider-servis-img">
               <li class="servis-list servis-list-delivery activ">
                 <h3 class="h3">Доставка</h3>
-                <p>
+                <p class="homepage-content">
                   Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно!
                   Ведь мы неплохо заработаем,
@@ -280,7 +283,7 @@
               </li>
               <li class="servis-list servis-list-guarentee">
                 <h3 class="h3">Гарантия</h3>
-                <p>
+                <p class="homepage-content">
                   Если купленный у нас товар поломается или заскрипит,
                   а также в случае пожара, спровоцированного его возгаранием,
                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -290,7 +293,7 @@
               </li>
               <li class="servis-list servis-list-credit">
                 <h3 class="h3">Кредит</h3>
-                <p>
+                <p class="homepage-content">
                   Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.
                 </p>
@@ -298,40 +301,40 @@
               </li>
             </ul>
           </div>
-        </section>
-        <section class="about">
-          <div class="container clearfix">
-            <article class="about-us">
-              <h2 class="h2">Компания "Техномарт"</h2>
-              <p>
-                Настоящий мужской шопинг начинается здесь!
-                Огромный выбор товаров для ремонта и строительства
-                не оставит равнодушными любителей сэкономить на гастарбайтерах.
-              </p>
-              <p>
-                Мы можем доставить ваш товар в самые отдаленные точки России!
-                Техномарт работает со многими транспортными компаниями:
-              </p>
-              <ul class="about-list">
-                <li>Деловые линии</li>
-                <li>Автотрейтинг</li>
-                <li>ЖелДорЭкспедиция</li>
-              </ul>
-              <a class="btn" href="#">Подробнее о компании</a>
-            </article>
-            <article class="map">
-              <h2 class="h2">контакты</h2>
-              <p>
-                Вы можете забрать товар сами, заехав в наш офис:
-              </p>
-              <a class="map js-map" href="#">
-                <img src="img/home_map.jpg" width="300" height="158" alt="Карта">
-              </a>
-              <button class="btn" type="button" name="write">Заблудились? Напишите нам!</button>
-            </article>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container clearfix">
+          <article class="about-us">
+            <h2 class="servis-title">Компания «Техномарт»</h2>
+            <p class="homepage-content">
+              Настоящий мужской шопинг начинается здесь!
+              Огромный выбор товаров для ремонта и строительства
+              не оставит равнодушными любителей сэкономить на гастарбайтерах.
+            </p>
+            <p class="homepage-content">
+              Мы можем доставить ваш товар в самые отдаленные точки России!
+              Техномарт работает со многими транспортными компаниями:
+            </p>
+            <ul class="about-list">
+              <li>Деловые линии</li>
+              <li>Автотрейтинг</li>
+              <li>ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="btn" href="#">Подробнее о компании</a>
+          </article>
+          <article class="map">
+            <h2 class="servis-title">контакты</h2>
+            <p class="homepage-content">
+              Вы можете забрать товар сами, заехав в наш офис:
+            </p>
+            <a class="map js-map" href="#">
+              <img src="img/home_map.jpg" width="300" height="158" alt="Карта">
+            </a>
+            <button class="btn" type="button" name="write">Заблудились? Напишите нам!</button>
+          </article>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="footer-top">

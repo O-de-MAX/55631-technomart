@@ -109,17 +109,34 @@ clear: both;
 .search {
   float: left;
 }
-.search > label,
-.search > input {
-  display: inline-block;
+.search-form input[type="submit"] {
+  display: none;
 }
-.icon-search {
-  padding: 0 10px;
+.search-submit {
+  display: block;
+  position: relative;
+  background: #293449;
+  padding-left: 30px;
+  line-height: 30px;
+}
+.search-submit::before {
+  content: "🔍";
+  font-family: "symbols-technomart";
+  font-size: 17px;
+  line-height: 41px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 43px;
+  text-align: center;
+  background: #293449;
+  color: rgba(255,255,225,0.3);
 }
 .search-line {
-  width: 220px;
+  margin-left: 44px;
+  width: 225px;
   border: none;
-  outline: none;
   line-height: 41px;
   background: #293449;
   color: #ffffff;
@@ -143,21 +160,23 @@ clear: both;
   background: #212a3a;
   border: none;
 }
-.search-form:hover .icon-search {
-  opacity: 1;
+.search-form:hover .search-submit::before {
+  background: #212a3a;
+  color: rgba(255,255,225,1);
 }
 .search-form:hover .search-line {
   background: #212a3a;
 }
-
 .search-form .search-line:focus {
   background: #ffffff;
   color: #000000;
   cursor: auto;
+  outline: none;
 }
-
-/*изменить цвет лупы и фона у лупы при фокусе? как?*/
-
+.search-line:focus ~ .search-submit::before {
+  background: #ffffff;
+  color: rgba(238,54,67,1);
+}
 .header-personal {
   float: right;
   width: 450px;
@@ -645,9 +664,8 @@ clear: both;
   border: 3px solid #63a63e;
   background-color: #ffffff;
 }
-.icon-basket {
-  margin-right: 15px;
-  margin-left: -35px;
+.icon-basket , .icon-bookmark {
+  padding-right: 10px;
 }
 .btn-to-basket:hover {
   background: #5fbb2d;
@@ -727,6 +745,7 @@ clear: both;
 }
 .brands-items {
   font-size: 0;
+  margin-bottom: 65px;
 }
 .logo-item {
   box-sizing: border-box;
@@ -753,15 +772,26 @@ clear: both;
   box-shadow: 0 0 20px -5px #818181;
   opacity: 0.5;
 }
-
-
-
-
 .servis {
-  background-color: #ee3643;
+  background-color: #f2f6f8;
   padding: 65px 0 100px 0;
+  margin-bottom: 75px;
 
 }
+.servis-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #000000;
+}
+.homepage-content {
+  font-size: 13px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
 .slider-servis-list {
   float: left;
   width: 240px;
@@ -771,7 +801,7 @@ clear: both;
   width: 620px;
 }
 .about {
-  margin-bottom: 85px;
+  margin-bottom: 65px;
 }
 .about-us {
   float: left;
@@ -779,7 +809,7 @@ clear: both;
 }
 .map {
   float: right;
-  width: 330px;
+  width: 300px;
 }
 /*для картинок - высота  -авто, ширина в %*/
 .modal-content {
