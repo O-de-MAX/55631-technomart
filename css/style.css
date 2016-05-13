@@ -606,9 +606,6 @@ clear: both;
   font-size: 16px;
   font-weight: 600;
 }
-
-/* разная высота карточек каталога? как? */
-
 .label-new {
   position: relative;
   overflow: hidden;
@@ -779,8 +776,6 @@ clear: both;
 .servis {
   background-color: #f2f6f8;
   padding: 65px 0 100px 0;
-
-
 }
 .servis-title {
   margin: 0;
@@ -795,7 +790,6 @@ clear: both;
   line-height: 24px;
   margin-top: 23px;
 }
-
 .slider-servis-list {
   float: left;
   width: 240px;
@@ -1166,9 +1160,9 @@ clear: both;
   float: left;
   width: 220px;
 }
-.filter-group {
 
-}
+
+
 .filter-group input[type="checkbox"],
 .filter-group input[type="radio"] {
   display: none;
@@ -1188,7 +1182,6 @@ clear: both;
   position: absolute;
   top: 0;
   left: 0;
-
   width: 28px;
   height: 28px;
 }
