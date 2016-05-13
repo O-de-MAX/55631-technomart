@@ -22,7 +22,7 @@
               <i class="icon icon-bookmark"></i>
               Закладки: 0
             </a>
-            <a class="personal personal-cart" href="#">
+            <a class="personal personal-cart active" href="#">
               <i class="icon icon-basket"></i>
               Корзина: 10
             </a>
@@ -47,19 +47,20 @@
               </p>
           </div>
           <div class="user-block">
-            <div class="login">
-              <i class="icon icon-user"></i>
-              <a class="login-block" href="#">Равшан Джамшутович</a>
+            <div class="user-row1">
+              <a class="login-block" href="#"><i class="icon icon-user"></i>Равшан Джамшутович</a>
+              <a class="logout" href="#"><i class="icon icon-logout"></i></a>
+            </div>
+            <div class="user-row2">
               <ul>
                 <li class="user-list">
-                  <a class="user-nav" href="#">Мои заказы</a>
+                  <a class="user-nav  list-style" href="#">Мои заказы</a>
                 </li>
                 <li class="user-list">
                   <a class="user-nav" href="#">Личный кабинет</a>
                 </li>
               </ul>
             </div>
-            <a class="icon" href="#"><i class="icon icon-logout"></i></a>
           </div>
         </div>
         <div class="container">
@@ -80,20 +81,41 @@
     <div class="main">
       <div class="container">
         <ul class="breadcrumbs">
-          <li><a href="#"><i class="icon icon-home"></i></a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Инструмент</a></li>
+          <li>
+            <a class="breadcrumb" href="#">
+              <i class="icon icon-home"></i>
+            </a>
+          </li>
+          <li>
+            <i class="icon icon-right"></i>
+          </li>
+          <li>
+            <a class="breadcrumb" href="#">
+              Каталог
+            </a>
+          </li>
+          <li>
+            <i class="icon icon-right"></i>
+          </li>
+          <li>
+            <a class="breadcrumb" href="#">
+              Инструмент
+            </a>
+          </li>
+          <li>
+            <i class="icon icon-right"></i>
+          </li>
           <li class="active">Перфораторы</li>
         </ul>
         <div class="main-title">
-          <h1 class="h1">Перфораторы</h1>
+          <h1 class="section-title">Перфораторы</h1>
         </div>
         <div class="catalog-wrap clearfix">
           <div class="filters">
-            <span class="filter-title fill">Фильтр:</span>
+            <div class="filters-title fill">Фильтр:</div>
             <form class="filter-form" action="index.html" method="post">
               <div class="filter-group prise">
-                <h2 class="filters-title">цена:</h2>
+                <h2 class="filter-title">цена:</h2>
                 <div class="price-slider fill">
                   <div class="track">
                     <div class="handle"></div>
@@ -102,13 +124,13 @@
                   </div>
                 </div>
                 <div class="range">
-                  <input class="text-range fill" type="text" value="0">
-                  <span>-</span>
-                  <input class="text-range fill" type="text" value="50000">
+                  <input class="text-range fill" type="text" placeholder="0">
+                  <i>–</i>
+                  <input class="text-range fill" type="text" placeholder="30000">
                 </div>
               </div>
               <div class="filter-group brands">
-                <h2 class="filters-title">производители:</h2>
+                <h2 class="filter-title">производители:</h2>
                 <div class="brands-filter">
                   <input type="checkbox" name="bosch" id="checkbox1" checked>
                   <label  class="checkbox" for="checkbox1">BOSCH</label>
@@ -123,7 +145,7 @@
                 </div>
               </div>
               <div class="filter-group power">
-                <h2 class="filters-title">питание:</h2>
+                <h2 class="filter-title">питание:</h2>
                 <div class="power-filter">
                   <input type="radio" name="power" value="battery" id="radio1" checked>
                   <label class="radio" for="radio1">Аккумуляторные</label>
@@ -333,10 +355,10 @@
       </div>
       <div class="about-perfor">
         <div class="container">
-          <h2 class="h2">Пара слов о перфораторах</h2>
-          <p>
+          <h2 class="section-title about-title">Пара слов о перфораторах</h2>
+          <p class="homepage-content">
             Перфоратор - универсальный строительный инструмент. Предназначен для
-            сверления и дробления отверстий в кирпиче, бетоне и камне.
+            сверления и дробления отверстий в кирпиче, бетоне и камне.<br>
             Существуют электромеханические и пневматические перфораторы.
             Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
             В ассортиментном ряду есть выбор "тезрежимников": в одном устройстве будут совмещены
