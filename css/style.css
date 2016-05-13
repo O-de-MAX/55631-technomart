@@ -9,6 +9,28 @@ color: #000000;
   font-weight: normal;
   font-style: normal;
 
+  font-family: "Cuprum";
+  src: url("../fonts/cuprum.woff"),
+       url("../fonts/cuprum.woff2"),
+       url("../fonts/cuprumbold.woff"),
+       url("../fonts/cuprumbold.woff2"),
+       url("../fonts/cuprumitalic.woff"),
+       url("../fonts/cuprumitalic.woff2");
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff"),
+       url("../fonts/ptsans.woff2"),
+       url("../fonts/ptsansbold.woff"),
+       url("../fonts/ptsansbold.woff2");
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
   font-family: "symbols-technomart";
   src: url("../fonts/symbols-technomart.woff") format("woff"),
        url("../fonts/symbols-technomart.woff2") format("woff2");
