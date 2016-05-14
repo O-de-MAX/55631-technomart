@@ -113,30 +113,23 @@
         <div class="catalog-wrap clearfix">
           <div class="filters">
             <div class="filters-title fill">Фильтр:</div>
-            <form class="filter-form" action="index.html" method="post">
+            <form class="filter-form" action="form.php" method="GET">
               <div class="filter-group prise">
                 <h2 class="filter-title">цена:</h2>
-                <form action="form.php" method="GET">
-                  <div class="range-filter">
-                    <div class="range-controls fill">
-                      <div class="scale">
-                        <div class="bar" style="margin-left: 20%; width: 30%"></div>
-                      </div>
-                      <div class="handle handle-min"></div>
-                      <div class="handle handle-max"></div>
+                <div class="range-filter">
+                  <div class="range-controls fill">
+                    <div class="scale">
+                      <div class="bar" style="margin-left: 20%; width: 30%"></div>
                     </div>
-                    <div class="price-controls">
-                      <input class="min-price fill" type="text" value="0">
-                      <i>–</i>
-                      <input class="max-price fill" type="text" value="30000">
-                    </div>
-
-
+                    <div class="handle handle-min"></div>
+                    <div class="handle handle-max"></div>
                   </div>
-
-                </form>
-
-
+                  <div class="price-controls">
+                    <input class="min-price fill" type="text" value="0">
+                    <i>–</i>
+                    <input class="max-price fill" type="text" value="30000">
+                  </div>
+                </div>
               </div>
               <div class="filter-group brands">
                 <h2 class="filter-title">производители:</h2>
