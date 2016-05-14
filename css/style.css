@@ -1008,6 +1008,27 @@ clear: both;
   float: right;
   width: 620px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about {
   padding-top: 75px;
   padding-bottom: 51px;
@@ -1221,8 +1242,10 @@ input[type="radio"]:checked + .radio::before {
   color: #c1c1c1;
 }
 
+
 /*изменение цвета при наведении, как записать?*/
 /* TODO:  */
+
 
 .power {
   border-bottom: 0;
@@ -1344,12 +1367,9 @@ input[type="radio"]:checked + .radio::before {
 
 .paginator {
   width: 320px;
-
-
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: left;
-
 }
 
 .paginator a {
@@ -1559,20 +1579,25 @@ input[type="radio"]:checked + .radio::before {
   color: #ee3643;
 }
 .modal-wrap {
-  position: relative;;
+  position: relative;
 }
 .modal-content {
   box-sizing: border-box;
   position: absolute;
   bottom: 200px;
   left: 50%;
-  display: none;
   width: 620px;
   margin-left: -310px;
   border-top: 7px solid #ee3643;
   background: #ffffff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  z-index: 50;
 }
+
+.modal-content {
+  display: block;
+}
+
 .modal-content-close {
   position: absolute;
   top: 8px;
@@ -1654,6 +1679,7 @@ input[type="radio"]:checked + .radio::before {
   color: #999999;
 }
 
+
 /*отступы для надписи в окне "Текст письма" как задать не кодом ???*/
 
 
@@ -1671,19 +1697,59 @@ input[type="radio"]:checked + .radio::before {
   z-index: 1500;
   top: 50%;
   left: 50%;
-
   display: none;
   width: 940px;
   height: 445px;
   margin-top: -330px;
   margin-left: -470px;
-
   background: url("../img/home_map-big.jpg");
-
   box-shadow: 0 0 25px 0 #818181;
 }
+
 .modal-content-map .modal-content-close {
   background: none;
+}
+
+.wrap-modal-content {
+  padding: 47px 80px;
+}
+
+.wrap-modal-content .icon-modal-background ,
+.wrap-modal-content .modal-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon-modal-background {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-image: url("../img/catalog_icon_modal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: #63a63e;
+  margin-right: 35px;
+}
+
+.modal-text {
+  font-size: 30px;
+  line-height: 65px;
+  margin: 0;
+}
+
+.wrap-btn .btn-section {
+  display: inline-block;
+  width: 220px;
+}
+
+.wrap-btn .modal-content-btn-yes {
+  margin-right: 15px;
+}
+
+.wrap-btn .modal-content-btn-no {
+  background: #ffffff;
+  color: #000000;
 }
 
 /* нужен или нет?
