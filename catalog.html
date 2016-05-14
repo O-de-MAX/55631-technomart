@@ -116,22 +116,27 @@
             <form class="filter-form" action="index.html" method="post">
               <div class="filter-group prise">
                 <h2 class="filter-title">цена:</h2>
-                <div class="price-slider fill">
-                  <div class="track">
-                    <div class="track-container">
-                      <div class="progress">
-                        <div class="handle handle1"></div>
-                        <div class="progress-line"></div>
-                        <div class="handle handle2"></div>
+                <form action="form.php" method="GET">
+                  <div class="range-filter">
+                    <div class="range-controls fill">
+                      <div class="scale">
+                        <div class="bar" style="margin-left: 20%; width: 30%"></div>
                       </div>
+                      <div class="handle handle-min"></div>
+                      <div class="handle handle-max"></div>
                     </div>
+                    <div class="price-controls">
+                      <input class="min-price fill" type="text" value="0">
+                      <i>–</i>
+                      <input class="max-price fill" type="text" value="30000">
+                    </div>
+
+
                   </div>
-                </div>
-                <div class="range">
-                  <input class="text-range fill" type="text" placeholder="0">
-                  <i>–</i>
-                  <input class="text-range fill" type="text" placeholder="30000">
-                </div>
+
+                </form>
+
+
               </div>
               <div class="filter-group brands">
                 <h2 class="filter-title">производители:</h2>

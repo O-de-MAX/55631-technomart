@@ -1029,6 +1029,7 @@ clear: both;
 
 
 
+
 .about {
   padding-top: 75px;
   padding-bottom: 51px;
@@ -1115,86 +1116,75 @@ clear: both;
   margin-bottom: 5px;
 }
 
-.price-slider {
+.range-filter {
+  width: 220px;
+}
+
+.range-controls {
   position: relative;
-  height: 80px;
+  height: 41px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-bottom: 7px;
 }
 
-.track {
-  position: absolute;
-  top:40px;
-  left: 20px;
-  width: 180px;
+.range-controls .scale {
   height: 2px;
   background-color: #d7dcde;
 }
 
-.progress-line {
-  position: absolute;
-  top:0px;
-  left: 20px;
-  width: 120px;
+.range-controls .bar {
+  width: 75%;
   height: 2px;
-  background-color: #00ca74;
+  background: #00ca74;
 }
 
 .handle {
+  position: absolute;
+  top: 30px;
   width: 3px;
   height: 3px;
   background: #ababab;
   border: 9px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 0 0 #d7dcde;
+  box-shadow: 0 2px 1px 0 #d7dcde;
   z-index: 30;
+  cursor: pointer;
 }
 
-.handle1 {
-  position: absolute;
-  top:-10px;
+.handle-min {
   left: 0px;
 }
 
-.handle2 {
-  position: absolute;
-  top:-10px;
-  right: 20px;
+.handle-max {
+  right: 45px;
 }
 
-.text-range {
-  border: none;
-  width: 95px;
-  height: 39px;
-  text-align: center;
+.range-controls .handle-min {
+  left: 50px;
 }
 
-.range {
+.range-controls .handle-max {
+  left: 110px;
+}
+
+.price-controls {
   margin-bottom: 25px;
 }
 
-.range i {
+.price-controls i {
   margin: 0 6px;
 }
 
-.text-range::-webkit-input-placeholder {
+.price-controls input {
   font-size: 17px;
   font-family: "PT Sans", sans-serif;
+  width: 95px;
+  height: 39px;
   color: #000000;
-  text-overflow:ellipsis;
-}
-
-.text-range::-moz-placeholder {
-  font-size: 17px;
-  font-family: "PT Sans", sans-serif;
-  color: #000000;
-  text-overflow:ellipsis;
-}
-
-.text-range:-ms-input-placeholder {
-  font-size: 17px;
-  font-family: "PT Sans", sans-serif;
-  color: #000000;
-  text-overflow:ellipsis;
+  border: none;
+  text-align: center;
 }
 
 .filter-group input[type="checkbox"],
@@ -1595,7 +1585,7 @@ input[type="radio"]:checked + .radio::before {
 }
 
 .modal-content {
-  display: block;
+  display: none;
 }
 
 .modal-content-close {
