@@ -143,10 +143,15 @@ clear: both;
   width: 220px;
   font-size: 24px;
   text-transform: uppercase;
+  text-decoration: none;
   color: #ffffff;
   background: #ee3643;
   text-align: center;
   padding: 8px 0;
+}
+
+.main-logo-home {
+  cursor: text;
 }
 
 .main-logo::after {
@@ -156,15 +161,24 @@ clear: both;
   bottom: -5px;
   left: 0;
   height: 5px;
-  background-color: #8e1e26;
+  background-color: #b52933;
 }
 
-.main-logo:hover, .main-logo:active {
+.main-logo:hover {
   background-color: #ca2c37;
+}
+
+.main-logo:active {
+  background-color: #ba2732;
+}
+
+.main-logo:hover .main-logo::after {
+  background-color: #9a212a;
 }
 
 .search {
   float: left;
+  vertical-align: top;
 }
 
 .search-form input[type="submit"] {
@@ -188,7 +202,7 @@ clear: both;
   bottom: 0;
   left: 0;
   width: 45px;
-  height: 43px;
+  height: 45px;
   text-align: center;
   background: #293449;
   color: rgba(255,255,225,0.3);
@@ -196,9 +210,9 @@ clear: both;
 
 .search-line {
   margin-left: 44px;
-  width: 225px;
+  width: 226px;
   border: none;
-  line-height: 41px;
+  line-height: 42px;
   background: #293449;
   color: #ffffff;
 }
@@ -250,7 +264,7 @@ clear: both;
 
 .search-line:focus ~ .search-submit::before {
   background: #ffffff;
-  color: rgba(238,54,67,1);
+  color: #ee3643;
 }
 
 .header-personal {
@@ -273,6 +287,8 @@ clear: both;
 }
 
 .personal-order {
+  padding: 12px 0;
+  text-align: center;
   background: #63a63e;
 }
 
@@ -298,13 +314,14 @@ clear: both;
 
 .personal-cart:active,
 .personal-bookmark:active {
-  background: #212a3a;
-  opacity: 0.3;
+  background: #161d29;
+  opacity: 0.6;
 }
+
 .header-text {
   float: left;
   width: 200px;
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
   color: #ee3643;
   padding: 0 70px 0 50px;
@@ -318,25 +335,28 @@ clear: both;
 
 .header-contacts-telefone {
   box-sizing: border-box;
-  font-weight: 700;
+  width: 270px;
+  font-weight: bold;
   border: 3px solid #ffffff;
-  padding: 5px 10px;
 }
 
-.icon-phone {
+.header-contacts-telefone .icon-phone {
+  display: inline-block;
+  vertical-align: top;
   font-size: 22px;
-  padding-right: 10px;
+  padding: 8px 25px 8px 10px;
 }
 
-.header-contacts-telefone span {
+.header-contacts-telefone .telefone-number {
+  display: inline-block;
+  vertical-align: top;
   font-size: 21px;
   color: #e9292a;
-  padding: 0 15px;
+  padding: 8px 0px;
 }
 
 .header-contacts-address {
   font-size: 14px;
-  font-weight: bold;
   color: #32425c;
   text-align: center;
   margin-top: 7px;
@@ -345,6 +365,8 @@ clear: both;
 .user-block {
   float: right;
   width: 300px;
+  text-align: right;
+  font-size: 0;
 }
 
 .login-block {
@@ -369,21 +391,30 @@ clear: both;
   opacity: 1;
 }
 
-.login-block:active {
+.login-block:active ,
+.login-block:active .icon-login {
   color: rgba(0,0,0,0.3);
+}
+
+.user-block .user-reg ,
+.user-block .user-reg {
+  vertical-align: top;
 }
 
 .user-login {
   padding: 10px 25px 10px 10px;
 }
-.user-reg {
+
+.user-block .user-reg {
+  display: inline-block;
   padding: 10px 25px;
-  margin-left: 5px;
+  margin-left: 10px;
+  text-align: center;
 }
 
 .login-block .icon-login {
   font-size: 22px;
-  padding-right: 10px;
+  padding: 11px 10px 8px 0;
   line-height: 45px;
 }
 
@@ -465,16 +496,17 @@ clear: both;
 }
 
 .main-nav {
-  background: #293449
+  background: #32425c;
+  border-bottom: 5px solid #293449;
 }
 
 .main-nav ul {
   position: relative;
   margin: 30px 0 0 0;
-  padding: 0 0 0 20px;
+  padding: 0;
   list-style: none;
   font-size: 0;
-  border-bottom: 5px solid #1d2739;
+  text-align: center;
 }
 /* второй вариант реализации, какой корректнее?
 .main-nav ul::after {
@@ -506,7 +538,7 @@ clear: both;
 
 .main-nav-list a:active {
   background: #1d2739;
-  color: rgba(255,255,225,0.3);
+  color: rgba(255,255,225,0.5);
 }
 
 .breadcrumbs {
@@ -553,6 +585,7 @@ clear: both;
   margin-bottom: 20px;
   padding: 24px;
 }
+
 .category-catalog {
   position: relative;
   width: 620px;
@@ -567,6 +600,7 @@ clear: both;
   position: absolute;
   bottom: 110px;
   z-index: 1000;
+  cursor: pointer;
 }
 .slider-left {
   left: 0px;
@@ -593,22 +627,40 @@ clear: both;
   color: #ffffff;
   padding: 25px;
 }
-.slide-title {
+.slide-text .slide-title {
   font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 0;
 }
 .slide-text p {
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   margin: 0;
 }
+
+.btn {
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
 .btn-slider {
   position: absolute;
   bottom: 30px;
   left: 25px;
-  width: 195px;
   background: #ee3643;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 .slider-controls {
   position: absolute;
@@ -633,11 +685,11 @@ clear: both;
   background: #ee3643;
 }
 .category-slide:nth-child(1) {
-  background-image:url("../img/home_first-foto.png");
+  background-image:url("../img/home_first-foto.jpg");
   background-repeat:no-repeat;
 }
 .category-slide:nth-child(2) {
-  background-image:url("../img/home_second-foto.png");
+  background-image:url("../img/home_second-foto.jpg");
   background-repeat:no-repeat;
 }
 .category-slide {
@@ -657,6 +709,7 @@ clear: both;
 
 .category-title {
   font-size: 24px;
+  font-weight: bold;
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 10px;
@@ -685,34 +738,13 @@ clear: both;
   margin-right: 0;
   background-color: #f6b22d;
 }
-.btn {
-  display: block;
-  padding: 7px 0;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-}
-.btn-category {
-  width: 123px;
-  background:rgba(229,229,229,0.1);
-}
-.btn-category:hover {
-  background:rgba(229,229,229,0.2);
-}
-.btn-category:active {
-  background:rgba(229,229,229,0.3);
-}
+
 .category-icon-sprite {
   background-image: url("../img/home_icon_sprite.png");
   background-repeat: no-repeat;
   display: block;
 }
+
 .sprite-icon-delivery {
   position: absolute;
   top: 30px;
@@ -721,6 +753,7 @@ clear: both;
   height: 63px;
   background-position: -5px -5px;
 }
+
 .sprite-icon-machine {
   position: absolute;
   top: 35px;
@@ -753,6 +786,18 @@ clear: both;
   height: 61px;
   background-position: -5px -307px;
 }
+
+.btn-category {
+  width: 123px;
+  background:rgba(0,0,0,0.1);
+}
+.btn-category:hover {
+  background:rgba(0,0,0,0.2);
+}
+.btn-category:active {
+  background:rgba(0,0,0,0.3);
+}
+
 .popular-group {
   margin-bottom: 20px;
   margin-left: 0;
@@ -765,11 +810,10 @@ clear: both;
 .section-title {
   margin: 0;
   font-size: 30px;
-  line-height: 90px;
   font-weight: normal;
   color: #32425c;
   text-transform: uppercase;
-  padding-left: 25px;
+  padding: 28px 0 28px 25px;
 }
 .col-section1 {
   float: left;
@@ -832,7 +876,9 @@ clear: both;
   text-align: center;
   line-height: 28px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: "PT Sans", sans-serif;
   background: #ee3643;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -900,7 +946,6 @@ clear: both;
   width: 218px;
   height: 168px;
   text-align: center;
-  overflow: hidden;
 }
 .catalog-item-image img {
   max-width: 100%;
@@ -953,6 +998,7 @@ clear: both;
 }
 .catalog-item:hover {
   box-shadow: 0 0 25px 0 #818181;
+  border: none;
 }
 .brands-items {
   font-size: 0;
@@ -1178,6 +1224,7 @@ clear: both;
 }
 
 .price-controls input {
+  display: inline-block;
   font-size: 17px;
   font-family: "PT Sans", sans-serif;
   width: 95px;
@@ -1248,6 +1295,15 @@ input[type="radio"]:checked + .radio::before {
   color: #000000;
   background: #ffffff;
   border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.filters-btn:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.filters-btn:active {
+  border: 1px solid #ee3643;
 }
 
 .catalog-page {
@@ -1528,6 +1584,7 @@ input[type="radio"]:checked + .radio::before {
   background: #212a3a;
   position: relative;
   text-align: center;
+  text-decoration: none;
 }
 .social-btn .icon {
   font-size: 18px;
