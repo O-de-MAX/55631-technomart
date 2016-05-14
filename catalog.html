@@ -118,9 +118,13 @@
                 <h2 class="filter-title">цена:</h2>
                 <div class="price-slider fill">
                   <div class="track">
-                    <div class="handle"></div>
-                    <div class="progress"></div>
-                    <div class="handle"></div>
+                    <div class="track-container">
+                      <div class="progress">
+                        <div class="handle handle1"></div>
+                        <div class="progress-line"></div>
+                        <div class="handle handle2"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="range">
@@ -157,15 +161,15 @@
             </form>
           </div>
           <div class="catalog-page">
-            <div class="sort-row fill">
-              <span class="sort-title">Сортировка:</span>
-              <ul class="sotr-type">
-                <li class="action"><a href="#">по цене</a></li>
-                <li><a href="#">по типу</a></li>
-                <li><a href="#">по функционалу</a></li>
+            <div class="sort-row clearfix fill">
+              <div class="sort-title">Сортировка:</div>
+              <ul class="sotr-types">
+                <li class="activ"><a class="sotr-type activ" href="#">по цене</a></li>
+                <li><a class="sotr-type" href="#">по типу</a></li>
+                <li><a class="sotr-type" href="#">по функционалу</a></li>
               </ul>
               <div class="sort-up-down">
-                <div class="icon icon-up-dir"></div>
+                <div class="icon icon-up-dir activ"></div>
                 <div class="icon icon-down-dir"></div>
               </div>
             </div>
@@ -345,9 +349,9 @@
               </div>
               <div class="paginator">
                 <a class="current" href="#">1</a>
-                <a class="item" href="#">2</a>
-                <a class="item" href="#">3</a>
-                <a class="item" href="#">следующая</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a class="next" href="#">следующая</a>
               </div>
             </div>
           </div>

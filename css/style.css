@@ -354,6 +354,12 @@ clear: both;
   text-decoration: none;
 }
 
+.logout {
+  font-size: 22px;
+  color: #000000;
+  text-decoration: none;
+}
+
 .user-login:hover , .user-reg:hover {
   color: #ee3643;
 }
@@ -787,9 +793,7 @@ clear: both;
 .btn-slider:active {
   background: #ba2732;
 }
-.popular {
-  margin-bottom: 20px;
-}
+
 .popular-items {
   box-sizing: border-box;
   font-size: 0;
@@ -810,6 +814,7 @@ clear: both;
   border: 1px solid #e5e5e5;
   font-size: 16px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 .label-new {
   position: relative;
@@ -1089,15 +1094,51 @@ clear: both;
   margin-bottom: 5px;
 }
 
-
-
 .price-slider {
+  position: relative;
   height: 80px;
   margin-bottom: 7px;
 }
 
-/* TODO:  */
+.track {
+  position: absolute;
+  top:40px;
+  left: 20px;
+  width: 180px;
+  height: 2px;
+  background-color: #d7dcde;
+}
 
+.progress-line {
+  position: absolute;
+  top:0px;
+  left: 20px;
+  width: 120px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.handle {
+  width: 3px;
+  height: 3px;
+  background: #ababab;
+  border: 9px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 #d7dcde;
+  z-index: 30;
+}
+
+.handle1 {
+  position: absolute;
+  top:-10px;
+  left: 0px;
+}
+
+.handle2 {
+  position: absolute;
+  top:-10px;
+  right: 20px;
+}
 
 .text-range {
   border: none;
@@ -1163,6 +1204,7 @@ input[type="checkbox"]:checked + .checkbox::before {
   content: "\2611";
   color: #c1c1c1;
 }
+
 .radio::before {
   content: "\25cb";
   font-family: "symbols-technomart";
@@ -1179,6 +1221,7 @@ input[type="radio"]:checked + .radio::before {
   color: #c1c1c1;
 }
 
+/*изменение цвета при наведении, как записать?*/
 /* TODO:  */
 
 .power {
@@ -1194,22 +1237,147 @@ input[type="radio"]:checked + .radio::before {
   border: 1px solid #e5e5e5;
 }
 
-
-
-
-
-
 .catalog-page {
   float: right;
   width: 700px;
   text-align: right;
-  margin-bottom: 125px;
 }
 
+.sort-row {
+  width: 100%;
+  margin-bottom: 23px;
+  text-align: left;
+}
+
+.sort-title {
+  float: left;
+  box-sizing: border-box;
+  width: 220px;
+  padding-left: 17px;
+  line-height: 37px;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.sotr-types {
+  float: left;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.sotr-types li {
+  display: inline;
+  list-style: none;
+  padding-right: 70px;
+
+}
+
+.sotr-types li:nth-child(2) {
+  padding-right: 60px;
+}
+
+.sotr-types li:last-child {
+  padding: 0;
+}
+
+.sotr-type {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  line-height: 37px;
+  font-size: 13px;
+  color: #000000;
+  opacity: 0.5;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sotr-type.activ {
+  border-bottom: none;
+  color: #ee3643;
+  opacity: 1;
+}
+
+.sotr-type:hover {
+  opacity: 1;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sort-up-down {
+  float: right;
+  width: 80px;
+  text-align: center;
+  font-size: 23px;
+}
+
+.icon-up-dir , .icon-down-dir {
+  display: inline-block;
+  line-height: 37px;
+  font-size: 23px;
+}
+
+.icon-up-dir:hover , .icon-down-dir:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+.icon-up-dir.activ {
+  color: #ee3643;
+  opacity: 1;
+}
+
+.catalog-item-pan {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.catalog-item-grid {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.paginator {
+  width: 320px;
 
 
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: left;
 
+}
 
+.paginator a {
+  display: inline-block;
+  height: 37px;
+  min-width: 37px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  line-height: 37px;
+  font-size: 13px;
+  color: #000000;
+  margin-right: 6px;
+}
+
+.paginator .next {
+  padding: 0 30px;
+}
+
+.paginator .current {
+  color: #ffffff;
+  background: #ee3643;
+  border: 1px solid #ee3643;
+}
 
 .about-perfor {
   padding: 30px 0 65px 0;
@@ -1521,52 +1689,3 @@ input[type="radio"]:checked + .radio::before {
   background: rgba(0, 0, 0, 0.5);
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sort-row {
-  margin-bottom: 25px;
-}
-.sotr-type {
-  float: right;
-  margin: 0;
-  padding: 0;
-}
-.sotr-type li {
-  display: inline;
-  list-style: none;
-}
-.catalog-item-pan {
-  box-sizing: border-box;
-  font-family: sans-serif;
-  font-size: 0;
-  margin-left: -10px;
-  margin-right: -10px;
-}
-.catalog-item-grid {
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  width: 33.3%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.paginator {
-  margin-top: 50px;
-}
