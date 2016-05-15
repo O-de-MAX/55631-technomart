@@ -68,67 +68,73 @@
       </div>
     </header>
     <section class="category-grid">
-      <div class="container clearfix">
-        <div class="category materials label-new">
-          <h3 class="category-title">Материалы</h3>
-          <a class="btn btn-category" href="#">На любой вкус</a>
-          <span class="category-icon-sprite sprite-icon-materials"></span>
+      <div class="container">
+        <div class="category-grid-row clearfix">
+          <div class="category materials label-new">
+            <h3 class="category-title">Материалы</h3>
+            <a class="btn btn-category" href="#">На любой вкус</a>
+            <span class="category-icon-sprite sprite-icon-materials"></span>
+          </div>
+          <div class="category tool">
+            <h3 class="category-title">Инструмент</h3>
+            <a class="btn btn-category" href="#">На все случаи</a>
+            <span class="category-icon-sprite sprite-icon-tool"></span>
+          </div>
+          <div class="category machine">
+            <h3 class="category-title">Техника</h3>
+            <a class="btn btn-category" href="#">Для стройки</a>
+            <span class="category-icon-sprite sprite-icon-machine"></span>
+          </div>
         </div>
-        <div class="category tool">
-          <h3 class="category-title">Инструмент</h3>
-          <a class="btn btn-category" href="#">На все случаи</a>
-          <span class="category-icon-sprite sprite-icon-tool"></span>
-        </div>
-        <div class="category machine">
-          <h3 class="category-title">Техника</h3>
-          <a class="btn btn-category" href="#">Для стройки</a>
-          <span class="category-icon-sprite sprite-icon-machine"></span>
-        </div>
-        <div class="category category-catalog">
-          <div class="category-slider">
-            <label class="slider-left" for="foto-1">
-              <i class="icon-left"></i>
-            </label>
-            <input class="slider-radio" type="radio" id="foto-1" name="home-foto" checked>
-            <label class="slider-right" for="foto-2">
-              <i class="icon-right"></i>
-            </label>
-            <input class="slider-radio" type="radio" id="foto-2" name="home-foto">
-            <div class="category-slides">
-              <div class="category-slide">
-                <div class="slide-text">
-                  <h3 class="slide-title">Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
-                  <div class="slider-controls">
-                    <div class="slider-control active-slider-control"></div>
-                    <div class="slider-control"></div>
-                  </div>
-                  <a class="btn btn-slider" href="#">Открыть каталог</a>
-                </div>
+        <div class="category-grid-row clearfix">
+          <div class="category-grid-col1">
+            <div class="category-slider">
+              <input type="radio" id="catalog-foto-1" name="catalog-foto" checked>
+              <input type="radio" id="catalog-foto-2" name="catalog-foto">
+              <div class="category-slider-control category-slider-control-left">
+                <label for="catalog-foto-1"><i class="icon-left"></i></label>
               </div>
-              <div class="category-slide">
-                <div class="slide-text">
-                  <h3 class="slide-title">Дрели</h3>
-                  <p>Соседям на радость!</p>
-                  <div class="slider-controls">
-                    <div class="slider-control"></div>
-                    <div class="slider-control active-slider-control"></div>
+              <div class="category-slider-control category-slider-control-right">
+                <label for="catalog-foto-2"><i class="icon-right"></i></label>
+              </div>
+              <div class="category-slides">
+                <div class="category-slide">
+                  <div class="slide-text">
+                    <h3 class="slide-title">Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                    <div class="slider-checks">
+                      <div class="slider-check active-slider-check"></div>
+                      <div class="slider-check"></div>
+                    </div>
+                    <a class="btn btn-slider" href="#">Открыть каталог</a>
                   </div>
-                  <a class="btn btn-slider" href="#">Открыть каталог</a>
+                </div>
+                <div class="category-slide">
+                  <div class="slide-text">
+                    <h3 class="slide-title">Дрели</h3>
+                    <p>Соседям на радость!</p>
+                    <div class="slider-checks">
+                      <div class="slider-check"></div>
+                      <div class="slider-check active-slider-check"></div>
+                    </div>
+                    <a class="btn btn-slider" href="#">Открыть каталог</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="category sale50">
-          <h3 class="category-title">Скидки 50%</h3>
-          <a class="btn btn-category" href="#">на 350 товаров</a>
-          <span class="category-icon-sprite sprite-icon-sale50"></span>
-        </div>
-        <div class="category delivery">
-          <h3 class="category-title">Доставка</h3>
-          <a class="btn btn-category" href="#">Бесплатно</a>
-          <span class="category-icon-sprite sprite-icon-delivery"></span>
+          <div class="category-grid-col2">
+            <div class="category sale50">
+              <h3 class="category-title">Скидки 50%</h3>
+              <a class="btn btn-category" href="#">на 350 товаров</a>
+              <span class="category-icon-sprite sprite-icon-sale50"></span>
+            </div>
+            <div class="category delivery">
+              <h3 class="category-title">Доставка</h3>
+              <a class="btn btn-category" href="#">Бесплатно</a>
+              <span class="category-icon-sprite sprite-icon-delivery"></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -140,7 +146,7 @@
               <h2 class="section-title">Популярные товары:</h2>
             </div>
             <div class="col-section2">
-              <a class="btn btn-section" href="#">все популярные товары</a>
+              <a class="btn btn-section btn-section-popular" href="#">все популярные товары</a>
             </div>
           </div>
           <div class="popular-items">
@@ -228,7 +234,7 @@
               <h2 class="section-title">Популярные производители:</h2>
             </div>
             <div class="col-section2">
-              <a class="btn btn-section" href="#">Все производители</a>
+              <a class="btn btn-section btn-section-brands" href="#">Все производители</a>
             </div>
           </div>
           <div class="brands-items">
@@ -261,54 +267,58 @@
       </div>
       <section class="servis">
         <div class="container">
-          <h2 class="servis-title">Сервисы</h2>
-          <p class="homepage-content">
-            Хороший интернет-магазин отличается от плохого не только ценами!<br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          </p>
-          <div class="servis-slider">
-
-
+          <div class="servis-text">
+            <h2 class="servis-title">Сервисы</h2>
+            <p class="homepage-content">
+              Хороший интернет-магазин отличается от плохого не только ценами!<br>
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
           </div>
-
-
-
-
-          <div class="servises clearfix">
-            <ul class="slider-nav">
-              <li class="slider-servis activ">Доставка</li>
-              <li class="slider-servis">Гарантия</li>
-              <li class="slider-servis">Кредит</li>
-            </ul>
-            <ul class="slider-servis-img">
-              <li class="servis-list servis-list-delivery activ">
-                <h3 class="h3">Доставка</h3>
+          <div class="servis-slider clearfix">
+            <input type="radio" id="servis-1" name="serv-slider" checked>
+            <input type="radio" id="servis-2" name="serv-slider">
+            <input type="radio" id="servis-3" name="serv-slider">
+            <div class="servis-slider-controls">
+              <label for="servis-1">Доставка</label>
+              <label for="servis-2">Гарантия</label>
+              <label for="servis-3">Кредит</label>
+              <i class="servis-slider-controls-img"></i>
+            </div>
+            <div class="servis-slides">
+              <div class="servis-slide">
+                <div class="servis-title servis-slide-title">
+                  Доставка
+                </div>
                 <p class="homepage-content">
-                  Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,
-                  поднимая его на ваш этаж.
+                  Мы с удовольствием доставим ваш товар прямо<br>
+                  к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br>
+                  поднимая его на ваш этаж!
                 </p>
-              </li>
-              <li class="servis-list servis-list-guarentee">
-                <h3 class="h3">Гарантия</h3>
+              </div>
+              <div class="servis-slide">
+                <div class="servis-title servis-slide-title">
+                  Гарантия
+                </div>
                 <p class="homepage-content">
-                  Если купленный у нас товар поломается или заскрипит,
-                  а также в случае пожара, спровоцированного его возгаранием,
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                  сгоревший товар на новый.
+                  Если купленный у нас товар поломается или заискрит,<br>
+                  а также в случае пожара, спровоцированного его возгаранием,<br>
+                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                  сгоревший товар на новый.<br>
                   Дом уж восстановите как-нибудь сами.
                 </p>
-              </li>
-              <li class="servis-list servis-list-credit">
-                <h3 class="h3">Кредит</h3>
+              </div>
+              <div class="servis-slide">
+                <div class="servis-title servis-slide-title">
+                  Кредит
+                </div>
                 <p class="homepage-content">
-                  Залезть в долговую яму стало проще!
+                  Залезть в долговую яму стало проще!<br>
                   Кредитные консультанты придут вам на помощь.
                 </p>
-                <a href="#">Отправить заявку</a>
-              </li>
-            </ul>
+                <a class="btn btn-section" href="#">Отправить заявку</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -429,7 +439,7 @@
             </textarea>
           </div>
           <div class="wrap-btn">
-            <button class="btn btn-section" type="submit">Отправить</button>
+            <button class="btn btn-section btn-modal-home" type="submit">Отправить</button>
           </div>
         </form>
       </div>
