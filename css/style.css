@@ -1503,15 +1503,6 @@ clear: both;
   color: #c1c1c1;
 }
 
-input[type="checkbox"]:checked + .checkbox::before {
-  content: "\2611";
-  color: #c1c1c1;
-}
-
-input[type="checkbox"]:disabled + .checkbox::before {
-  color: #e9e9e9;
-}
-
 .radio::before {
   content: "\25cb";
   font-family: "symbols-technomart";
@@ -1523,23 +1514,41 @@ input[type="checkbox"]:disabled + .checkbox::before {
   height: 28px;
   color: #c1c1c1;
 }
+
+.brands-filter label.checkbox:hover::before,
+.power-filter label.radio:hover::before {
+  color: #b5b5b5;
+}
+
+.brands-filter label.checkbox:hover::before,
+.power-filter label.radio:hover::before {
+  color: #b5b5b5;
+}
+
+input[type="checkbox"]:checked + .checkbox::before {
+  content: "\2611";
+  color: #c1c1c1;
+}
+
 input[type="radio"]:checked + .radio::before {
   content: "\25cf";
   color: #c1c1c1;
+}
+
+input[type="checkbox"]:disabled + .checkbox::before {
+  color: #e9e9e9;
+}
+
+input[type="checkbox"]:disabled + label.checkbox:hover::before {
+  color: #e9e9e9;
 }
 
 input[type="radio"]:disabled + .radio::before {
   color: #e9e9e9;
 }
 
-.brands-filter label.checkbox:hover::before,
-.power-filter label.radio:hover::before {
-  color: #b5b5b5;
-}
-
-.brands-filter label.checkbox:hover::before,
-.power-filter label.radio:hover::before {
-  color: #b5b5b5;
+input[type="radio"]:disabled + .power-filter label.radio:hover::before {
+  color: #e9e9e9;
 }
 
 .filter-group.power {
