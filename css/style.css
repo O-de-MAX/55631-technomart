@@ -172,11 +172,11 @@ clear: both;
   background-color: #ba2732;
 }
 
-.main-logo:hover .main-logo::after {
+.main-logo:hover::after {
   background-color: #9a212a;
 }
 
-.main-logo:active .main-logo::after {
+.main-logo:active::after {
   background-color: #8e1e26;
 }
 
@@ -1502,9 +1502,12 @@ clear: both;
   height: 28px;
   color: #c1c1c1;
 }
-input[type="checkbox"]:checked + .checkbox::before {
-  content: "\2611";
-  color: #c1c1c1;
+input[type="checkbox"]:disabled + .checkbox::before {
+  color: #e9e9e9;
+}
+
+input[type="checkbox"]:disabled + .checkbox::before {
+  color: #e9e9e9;
 }
 
 .radio::before {
@@ -1523,10 +1526,15 @@ input[type="radio"]:checked + .radio::before {
   color: #c1c1c1;
 }
 
+.brands-filter label.checkbox:hover::before,
+.power-filter label.radio:hover::before {
+  color: #b5b5b5;
+}
 
-/*изменение цвета при наведении, как записать?*/
-/* TODO:  */
-
+.brands-filter label.checkbox:hover::before,
+.power-filter label.radio:hover::before {
+  color: #b5b5b5;
+}
 
 .filter-group.power {
   border-bottom: 0;
