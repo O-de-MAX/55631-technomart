@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <!--<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
-    <!--<link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -435,7 +433,7 @@
           </div>
           <div class="write-us-row2">
             <label class="write-us write-us-text" for="feedback-letter">Текст письма:</label>
-            <textarea class="write-us-letter" rows="6" name="text" id="feedback-letter" placeholder="В свободной форме">
+            <textarea class="write-us-letter" rows="5" name="text" id="feedback-letter" placeholder="В свободной форме">
     В свободной форме
             </textarea>
           </div>
@@ -448,62 +446,21 @@
     <div class="modal-content modal-content-map">
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
     </div>
-    <script type="text/javascript">
-      var link = document.querySelector(".btn-write-us");
-
-      var popup = document.querySelector(".modal-content-write-us");
-      var close = popup.querySelector(".modal-content-close");
-
-      var form = popup.querySelector(".modal-content-form");
-      var name = popup.querySelector("[name=name]");
-      var mail = popup.querySelector("[name=mail]");
-
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.add("modal-content-show");
-        name.focus();
-      });
-      close.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.remove("modal-content-show");
-      });
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        if (!name.value || !mail.value) {
-          event.preventDefault();
-          console.log("Нужно ввести имя и e-mail");
-        }
-      });
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (popup.classList.contains("modal-content-show")) {
-            popup.classList.remove("modal-content-show");
-          }
-        }
-      });
-
-      var mapOpen = document.querySelector(".js-open-map");
-
-      var mapPopup = document.querySelector(".modal-content-map");
-      var mapClose = mapPopup.querySelector(".modal-content-close");
-
-      mapOpen.addEventListener("click", function(event) {
-       event.preventDefault();
-       mapPopup.classList.add("modal-content-show");
-     });
-
-     mapClose.addEventListener("click", function(event) {
-       event.preventDefault();
-       mapPopup.classList.remove("modal-content-show");
-     });
-
-     window.addEventListener("keydown", function(event) {
-       if (event.keyCode === 27) {
-         if (mapPopup.classList.contains("modal-content-show")) {
-           mapPopup.classList.remove("modal-content-show");
-         }
-       }
-     });
-    </script>
+    <div class="modal-content added-to-card">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div class="wrap-modal-content">
+        <div class="icon-modal-background">
+          <span class="icon-modal"></span>
+        </div>
+        <p class="modal-text">
+          Товар добавлен в корзину!
+        </p>
+      </div>
+      <div class="wrap-btn">
+        <a class="btn btn-section modal-content-btn-yes" href="#">Оформить заказ</a>
+        <a class="btn btn-section modal-content-btn-no" href="#">Продолжить покупки</a>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
