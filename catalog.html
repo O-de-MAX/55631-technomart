@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
   </head>
   <body>
     <header class="page-header">
@@ -11,7 +14,7 @@
         <div class="container clearfix">
           <a class="main-logo" href="#">техномарт</a>
           <div class="search">
-            <form class="search-form">
+            <form class="search-form" method="post">
               <input class="search-input" type="submit" value="" id="submit1">
               <input class="search-line" type="search" name="header-search" placeholder="Поиск:">
               <label  class="search-submit" for="submit1"></label>
@@ -114,7 +117,7 @@
           <div class="filters">
             <div class="filters-title fill">Фильтр:</div>
             <form class="filter-form" action="form.php" method="GET">
-              <div class="filter-group prise">
+              <div class="filter-group price">
                 <h2 class="filter-title">цена:</h2>
                 <div class="range-filter">
                   <div class="range-controls fill">
@@ -124,9 +127,8 @@
                     <div class="handle handle-min"></div>
                     <div class="handle handle-max"></div>
                   </div>
-                  <div class="price-controls">
+                  <div class="price-controls hyphen">
                     <input class="min-price fill" type="text" value="0">
-                    <i>–</i>
                     <input class="max-price fill" type="text" value="30000">
                   </div>
                 </div>
@@ -167,8 +169,8 @@
                 <li><a class="sotr-type" href="#">по функционалу</a></li>
               </ul>
               <div class="sort-up-down">
-                <div class="icon icon-up-dir activ"></div>
-                <div class="icon icon-down-dir"></div>
+                <a class="icon icon-up-dir activ" href="#"></a>
+                <a class="icon icon-down-dir" href="#"></a>
               </div>
             </div>
             <div class="catalog-items">
@@ -453,7 +455,7 @@
         event.preventDefault();
         popup.classList.add("modal-content-show");
       });
-      
+
       close.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.remove("modal-content-show");
