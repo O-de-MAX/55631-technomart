@@ -443,5 +443,21 @@
         <a class="btn btn-section modal-content-btn-no" href="#">Продолжить покупки</a>
       </div>
     </div>
+    <script type="text/javascript">
+      var link = document.querySelector(".btn-to-basket");
+
+      var popup = document.querySelector(".added-to-card");
+      var close = popup.querySelector(".modal-content-close");
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+      });
+      
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+      });
+    </script>
   </body>
 </html>
