@@ -131,11 +131,16 @@ body {
   color: #ffffff;
 }
 
+.header-top .container {
+  line-height: 0;
+}
+
 .main-logo {
   position: relative;
   float: left;
   width: 220px;
   font-size: 24px;
+  line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
@@ -188,7 +193,6 @@ body {
   position: relative;
   background: #293449;
   padding-left: 30px;
-  line-height: 30px;
 }
 
 .search-submit::before {
@@ -198,9 +202,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
-  padding: 8px 3px 5px 11px;
+  padding: 12px 11px 12px 18px;
+  line-height: normal;
   text-align: center;
   background: #293449;
   color: rgba(255,255,225,0.3);
@@ -219,7 +222,6 @@ body {
 .search-form input[type="search"]::-webkit-input-placeholder {
   box-sizing: border-box;
   font-size: 17px;
-  line-height: 41px;
   font-family: "Cuprum", "Tahoma", sans-serif;
   color:#ffffff;
   opacity: 1;
@@ -229,7 +231,6 @@ body {
 .search-form input[type="search"]::-moz-placeholder {
   box-sizing: border-box;
   font-size: 17px;
-  line-height: 41px;
   font-family: "Cuprum", "Tahoma", sans-serif;
   color:#ffffff;
   opacity: 1;
@@ -239,7 +240,6 @@ body {
 .search-form input[type="search"]:-ms-input-placeholder {
   box-sizing: border-box;
   font-size: 17px;
-  line-height: 41px;
   font-family: "Cuprum", "Tahoma", sans-serif;
   color:#ffffff;
   opacity: 1;
@@ -293,8 +293,9 @@ body {
 
 .personal-order {
   padding: 12px 0;
-  text-align: center;
+  line-height: normal;
   background: #63a63e;
+  text-align: center;
 }
 
 .header-personal .active {
@@ -394,7 +395,7 @@ body {
   color: #ee3643;
 }
 
-.user-login:hover .icon-login{
+.user-login:hover .icon-login {
   color: #32425c;
   opacity: 1;
 }
@@ -746,8 +747,8 @@ body {
   height: 50px;
   z-index: 1000;
   text-align: center;
-
 }
+
 .category-slider-control-right {
   position: absolute;
   bottom: 110px;
@@ -944,7 +945,7 @@ body {
   overflow: hidden;
 }
 
-.label-new:before {
+.label-new::before {
   overflow: hidden;
   position: absolute;
   top: 6px;
@@ -1520,6 +1521,7 @@ body {
   position: relative;
   cursor: pointer;
 }
+
 .checkbox::before {
   content: "\2610";
   font-family: "symbols-technomart";
@@ -1996,17 +1998,14 @@ input[type="radio"]:disabled + .power-filter label.radio:hover::before {
   color: #ee3643;
 }
 
-.modal-wrap {
-  position: relative;
-}
 
 .modal-content {
   box-sizing: border-box;
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
+  position: fixed;
+  bottom: 22%;
+  left: 30%;
   width: 620px;
-  margin-left: -310px;
+
   border-top: 7px solid #ee3643;
   background: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);

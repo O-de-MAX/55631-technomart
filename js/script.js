@@ -1,6 +1,7 @@
 
 var feedbackLink = document.querySelector(".btn-write-us");
 var feedbackPopup = document.querySelector(".modal-content-write-us");
+
 var feedbackClose = feedbackPopup.querySelector(".modal-content-close");
 var form = feedbackPopup.querySelector(".modal-content-form");
 var name = feedbackPopup.querySelector("[name=name]");
@@ -59,16 +60,16 @@ window.addEventListener("keydown", function(event) {
 
 
 
-var congratulationsLink = document.querySelectorAll(".btn-to-basket");
-var congratulationsPopup = document.querySelectorAll(".added-to-card");
-var congratulationsClose = congratulationsPopup.querySelector(".modal-content-close");
+var mLink = document.querySelector(".btn-to-basket");
+var mPopup = document.querySelector(".added-to-card");
+var mClose = mPopup.querySelector(".modal-content-close");
 
-congratulationsLink.addEventListener("click", function(event) {
+mLink.addEventListener("click", function(event) {
   event.preventDefault();
-  congratulationsPopup.classList.add("modal-content-show");
+  mPopup.classList.add("modal-content-show");
 });
 
-congratulationsClose.addEventListener("click", function(event) {
+mClose.addEventListener("click", function(event) {
   event.preventDefault();
-  congratulationsPopup.classList.remove("modal-content-show");
+  mPopup.classList.remove("modal-content-show");
 });
