@@ -1,20 +1,4 @@
 
-
-var congratulationsLink = document.querySelector(".btn-to-basket");
-var congratulationsPopup = document.querySelector(".added-to-card");
-var congratulationsClose = congratulationsPopup.querySelector(".modal-content-close");
-
-congratulationsLink.addEventListener("click", function(event) {
-  event.preventDefault();
-  congratulationsPopup.classList.add("modal-content-show");
-});
-
-congratulationsClose.addEventListener("click", function(event) {
-  event.preventDefault();
-  congratulationsPopup.classList.remove("modal-content-show");
-});
-
-
 var feedbackLink = document.querySelector(".btn-write-us");
 var feedbackPopup = document.querySelector(".modal-content-write-us");
 var feedbackClose = feedbackPopup.querySelector(".modal-content-close");
@@ -27,10 +11,12 @@ feedbackLink.addEventListener("click", function(event) {
   feedbackPopup.classList.add("modal-content-show");
   name.focus();
 });
+
 feedbackClose.addEventListener("click", function(event) {
   event.preventDefault();
   feedbackPopup.classList.remove("modal-content-show");
 });
+
 form.addEventListener("submit", function(event) {
   event.preventDefault();
   if (!name.value || !mail.value) {
@@ -38,6 +24,7 @@ form.addEventListener("submit", function(event) {
     console.log("Нужно ввести имя и e-mail");
   }
 });
+
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
     if (feedbackPopup.classList.contains("modal-content-show")) {
@@ -68,4 +55,20 @@ window.addEventListener("keydown", function(event) {
      mapPopup.classList.remove("modal-content-show");
    }
  }
+});
+
+
+
+var congratulationsLink = document.querySelectorAll(".btn-to-basket");
+var congratulationsPopup = document.querySelectorAll(".added-to-card");
+var congratulationsClose = congratulationsPopup.querySelector(".modal-content-close");
+
+congratulationsLink.addEventListener("click", function(event) {
+  event.preventDefault();
+  congratulationsPopup.classList.add("modal-content-show");
+});
+
+congratulationsClose.addEventListener("click", function(event) {
+  event.preventDefault();
+  congratulationsPopup.classList.remove("modal-content-show");
 });
