@@ -281,6 +281,7 @@ body {
 .personal {
   box-sizing: border-box;
   font-size: 17px;
+  line-height:  normal;
   display: inline-block;
   vertical-align: top;
   text-align: left;
