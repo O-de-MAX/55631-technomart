@@ -1978,12 +1978,15 @@ input[type="radio"]:checked + .radio::before {
   width: 100%;
 }
 
+.modal-content-show {
+  display: block;
+}
+
 .modal-content-map {
   position: fixed;
   z-index: 1500;
   top: 50%;
   left: 50%;
-  display: none;
   width: 940px;
   height: 445px;
   margin-top: -330px;
