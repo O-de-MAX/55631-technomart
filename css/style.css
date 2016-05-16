@@ -1502,8 +1502,10 @@ clear: both;
   height: 28px;
   color: #c1c1c1;
 }
-input[type="checkbox"]:disabled + .checkbox::before {
-  color: #e9e9e9;
+
+input[type="checkbox"]:checked + .checkbox::before {
+  content: "\2611";
+  color: #c1c1c1;
 }
 
 input[type="checkbox"]:disabled + .checkbox::before {
@@ -1524,6 +1526,10 @@ input[type="checkbox"]:disabled + .checkbox::before {
 input[type="radio"]:checked + .radio::before {
   content: "\25cf";
   color: #c1c1c1;
+}
+
+input[type="radio"]:disabled + .radio::before {
+  color: #e9e9e9;
 }
 
 .brands-filter label.checkbox:hover::before,
