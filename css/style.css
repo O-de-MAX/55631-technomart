@@ -569,9 +569,10 @@ body {
 .list-icon::before {
   content: "\3e";
   position: absolute;
-  bottom: 12px;
+  bottom: 7px;
   left: 7px;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: "symbols-technomart";
   line-height: normal;
   color: #000000;
   opacity: 0.3;
