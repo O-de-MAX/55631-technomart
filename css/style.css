@@ -422,20 +422,20 @@ clear: both;
   width: 100%;
   box-sizing: border-box;
   background: #ffffff;
-  line-height: 45px;
   text-align: left;
-  padding: 0 5px 0 15px;
+  padding: 9px 0 10px 13px;
+  vertical-align: middle;
 }
 
-.icon-logout {
+.user-row1 .icon-logout {
   font-size: 22px;
 }
 
 .login-block {
-  padding-right: 20px;
+  padding-right: 35px;
 }
 
-.icon-user {
+.login-block .icon-user {
   padding-right: 8px;
 }
 
@@ -456,7 +456,7 @@ clear: both;
 .user-row2 ul {
   text-align: left;
   padding-left: 15px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .user-list {
@@ -533,8 +533,7 @@ clear: both;
 
 .breadcrumbs {
   margin: 0;
-  padding: 0;
-  line-height: 60px;
+  padding: 19px 0;
   text-align: left;
 }
 
@@ -549,17 +548,19 @@ clear: both;
 .breadcrumb {
   text-decoration: none;
   color: #000000;
+  padding-right: 5px;
 }
 
 .breadcrumbs .icon-home {
   font-size: 16px;
+  margin-left: -4px;
 }
 
 .breadcrumbs .icon-right {
   font-size: 14px;
   color: #000000;
   cursor: auto;
-  padding: 0 10px;
+  padding-right: 5px;
 }
 
 .category-grid {
@@ -951,6 +952,7 @@ clear: both;
 .button-order .btn-to-basket,
 .button-order .btn-to-bookmark {
   font-size: 14px;
+  font-family: "Cuprum", sans-serif;
   font-weight: normal;
   display: block;
   width: 135px;
@@ -964,19 +966,21 @@ clear: both;
 }
 
 .button-order .btn-to-basket {
+  text-align: left;
   box-shadow: inset 0 -3px 0 #367315;
 }
 
 .button-order .btn-to-bookmark {
   width: 129px;
-  padding: 7px 0;
-  color: #000000;
+  padding: 8px 0 6px 0;
+  color: #32425c;
   border: 3px solid #63a63e;
   background-color: #ffffff;
 }
 
 .btn-to-basket .icon-basket {
-  padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 15px;
 }
 
 .btn-to-basket:hover {
@@ -989,6 +993,7 @@ clear: both;
 
 .btn-to-basket:active {
   background: #518534;
+  box-shadow: inset 0 -3px 0 #518534;
 }
 
 .btn-to-basket:active .icon-basket {
@@ -996,7 +1001,7 @@ clear: both;
 }
 
 .btn-to-bookmark:hover {
-  border: 3px solid #000000;
+  border: 3px solid #32425c;
 }
 
 .btn-to-bookmark:active {
@@ -1069,7 +1074,7 @@ clear: both;
 }
 
 .catalog-item:hover {
-  box-shadow: 0 0 25px 0 #818181;
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
   border: 1px solid #ffffff;
 }
 
@@ -1105,11 +1110,11 @@ clear: both;
 }
 
 .logo-item:hover {
-  box-shadow: 0 0 25px 0 #818181;
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .logo-item:active {
-  box-shadow: 0 0 20px -5px #818181;
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.5;
 }
 
@@ -1320,7 +1325,7 @@ clear: both;
 
 .main-title {
   background: #f2f6f8;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .catalog-wrap {
@@ -1356,7 +1361,7 @@ clear: both;
 
 .filter-group {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .range-filter {
@@ -1417,7 +1422,7 @@ clear: both;
 }
 
 .price-controls i {
-  margin: 0 6px;
+  padding: 0 6px;
 }
 
 .price-controls input {
@@ -1431,14 +1436,23 @@ clear: both;
   text-align: center;
 }
 
+.filter-group.brands {
+  padding-bottom: 10px;
+}
+
+.brands .filter-title {
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+
 .filter-group input[type="checkbox"],
 .filter-group input[type="radio"] {
   display: none;
 }
 
-.checkbox, .radio {
+.checkbox {
   display: block;
-  margin: 20px 0;
+  margin: 18px 0;
   line-height: 20px;
   padding-left: 35px;
   position: relative;
@@ -1481,9 +1495,23 @@ input[type="radio"]:checked + .radio::before {
 /* TODO:  */
 
 
-.power {
+.filter-group.power {
   border-bottom: 0;
-  margin-bottom: 75px;
+  margin-bottom: 80px;
+}
+
+.power .filter-title {
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+
+.radio {
+  display: block;
+  margin: 16px 0;
+  line-height: 20px;
+  padding-left: 35px;
+  position: relative;
+  cursor: pointer;
 }
 
 .filters-btn {
@@ -1611,7 +1639,7 @@ input[type="radio"]:checked + .radio::before {
 .paginator {
   width: 320px;
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   text-align: left;
 }
 
@@ -1651,12 +1679,12 @@ input[type="radio"]:checked + .radio::before {
 }
 
 .about-perfor {
-  padding: 30px 0 65px 0;
+  padding: 63px 0 67px 0;
   background: #f2f6f8;
 }
 
-.about-title {
-  padding: 0;
+.about-perfor .about-title {
+  padding: 0 0 25px 0;
   color: #000000;
 }
 
@@ -1820,7 +1848,7 @@ input[type="radio"]:checked + .radio::before {
   display: inline-block;
   vertical-align: bottom;
   text-align: left;
-  padding: 0 10px 0 45px;
+  padding: 0 10px 0 35px;
   color: #ffffff;
   font-size: 16px;
 }
