@@ -35,7 +35,6 @@ window.addEventListener("keydown", function(event) {
 });
 
 
-
 var mapOpen = document.querySelector(".js-open-map");
 var mapPopup = document.querySelector(".modal-content-map");
 var mapClose = mapPopup.querySelector(".modal-content-close");
@@ -57,7 +56,6 @@ window.addEventListener("keydown", function(event) {
    }
  }
 });
-
 
 
 var mLink = document.querySelector(".btn-to-basket");
